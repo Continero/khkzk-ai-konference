@@ -21,11 +21,6 @@ const surveyHighlights = [
   { pct: "51%", text: "Praktické ukázky nasazení AI přímo ve firmách" },
 ];
 
-const modules = [
-  { id: "MOD_01", title: "Case Studies", desc: "Firmy ukazují reálné výsledky nasazení AI a robotů v číslech.", icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" },
-  { id: "MOD_02", title: "Live Demo", desc: "Humanoidní robot BOTT-E, kolaborativní ramena FANUC a další.", icon: "M13 10V3L4 14h7v7l9-11h-7z" },
-  { id: "MOD_03", title: "Networking", desc: "Celý den s lidmi, kteří AI reálně používají. Oběd a káva v ceně.", icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" },
-];
 
 export function About() {
   return (
@@ -94,38 +89,6 @@ export function About() {
           </div>
         </ScrollReveal>
 
-        {/* Transition: survey → conference response */}
-        <ScrollReveal>
-          <div className="flex items-center gap-4 mb-8">
-            <div className="flex-1 h-px bg-accent-cyan/15" />
-            <p className="font-mono text-[10px] text-accent-cyan/50 tracking-[0.3em] uppercase shrink-0">
-              ▸ Na základě dat stavíme konferenci
-            </p>
-            <div className="flex-1 h-px bg-accent-cyan/15" />
-          </div>
-          <h3 className="text-xl sm:text-2xl font-bold mb-8 text-center holo-glow">
-            Co vás na konferenci čeká
-          </h3>
-        </ScrollReveal>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {modules.map((m, i) => (
-            <ScrollReveal key={m.id} delay={0.1 + i * 0.1}>
-              <div className="hud-panel rounded-lg p-6 h-full">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-9 h-9 rounded bg-accent-cyan/10 flex items-center justify-center">
-                    <svg className="w-4.5 h-4.5 text-accent-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                      <path d={m.icon} />
-                    </svg>
-                  </div>
-                  <span className="font-mono text-xs text-accent-cyan/40 tracking-widest">{m.id}</span>
-                </div>
-                <h3 className="font-bold text-xl mb-2 holo-glow">{m.title}</h3>
-                <p className="text-text-secondary text-base leading-relaxed">{m.desc}</p>
-              </div>
-            </ScrollReveal>
-          ))}
-        </div>
       </div>
     </section>
   );

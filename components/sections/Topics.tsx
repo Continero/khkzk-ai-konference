@@ -29,6 +29,12 @@ const icons: Record<string, React.ReactNode> = {
   ),
 };
 
+const formats = [
+  { label: "Case Studies", desc: "Reálné výsledky firem v číslech" },
+  { label: "Live Demo", desc: "Humanoidní robot a AI naživo" },
+  { label: "Networking", desc: "Celý den s AI praktiky, oběd v ceně" },
+];
+
 export function Topics() {
   return (
     <section id="temata" className="relative py-28 px-6">
@@ -36,7 +42,7 @@ export function Topics() {
         <div className="h-[120px] sm:h-[200px] mb-6">
           <RemotionInView
             component={SectionActivation}
-            inputProps={{ sectionId: "02 // Core_Modules", title: "Hlavní témata", subtitle: "Tři pilíře konference — všechny zaměřené na praxi" }}
+            inputProps={{ sectionId: "02 // Core_Modules", title: "Co vás na konferenci čeká", subtitle: "Tři pilíře programu — všechny zaměřené na praxi" }}
             durationInFrames={90}
             width={800}
             height={200}
@@ -44,7 +50,8 @@ export function Topics() {
           />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {/* Theme cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
           {topics.map((topic, i) => (
             <ScrollReveal key={topic.title} delay={0.1 + i * 0.12}>
               <motion.div
@@ -52,11 +59,6 @@ export function Topics() {
                 className="group h-full"
               >
                 <div className="hud-panel rounded-lg p-7 h-full relative overflow-hidden">
-                  {/* Module ID */}
-                  <div className="font-mono text-[11px] text-accent-cyan/30 tracking-widest mb-5 uppercase">
-                    Module_{String(i + 1).padStart(2, "0")} // {topic.icon}
-                  </div>
-
                   <div className="text-accent-cyan mb-4 group-hover:drop-shadow-[0_0_8px_rgba(0,212,255,0.4)] transition-all">
                     {icons[topic.icon]}
                   </div>
@@ -82,6 +84,21 @@ export function Topics() {
             </ScrollReveal>
           ))}
         </div>
+
+        {/* Format strip */}
+        <ScrollReveal delay={0.2}>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            {formats.map((f, i) => (
+              <div key={f.label} className="flex items-center gap-3 rounded-lg border border-accent-cyan/10 px-5 py-4 bg-accent-cyan/[0.03]">
+                <span className="font-mono text-accent-cyan text-sm font-bold shrink-0">▸</span>
+                <div>
+                  <p className="font-bold text-sm holo-glow">{f.label}</p>
+                  <p className="text-text-secondary text-xs">{f.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );
