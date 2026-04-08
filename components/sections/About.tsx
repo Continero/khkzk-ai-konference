@@ -45,7 +45,7 @@ export function About() {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-16">
           {stats.map((stat, i) => (
             <ScrollReveal key={stat.label} delay={0.1 + i * 0.05}>
-              <div className="h-[140px] hud-panel rounded">
+              <div className="h-[160px] hud-panel rounded">
                 <RemotionInView
                   component={DataReadout}
                   inputProps={{ value: stat.value, label: stat.label, gaugeProgress: stat.gauge }}

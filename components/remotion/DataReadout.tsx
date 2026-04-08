@@ -84,12 +84,12 @@ export const DataReadout: React.FC<{
     }}>
       <div style={{ position: "absolute", inset: 0, background: "rgba(0,212,255,0.1)", opacity: scanFlash }} />
 
-      <ArcGauge progress={gaugeAnim} radius={48} color="rgba(0,212,255,0.4)" frame={frame} />
+      <ArcGauge progress={gaugeAnim} radius={52} color="rgba(0,212,255,0.4)" frame={frame} />
 
       <div style={{ textAlign: "center", position: "relative", zIndex: 1 }}>
         <div style={{
           fontFamily: "monospace",
-          fontSize: 28,
+          fontSize: 32,
           fontWeight: 700,
           color: "#00d4ff",
           textShadow: `0 0 ${8 + glowPulse * 4}px rgba(0,212,255,${0.4 + glowPulse * 0.2}), 0 0 25px rgba(0,212,255,0.1)`,
@@ -99,12 +99,12 @@ export const DataReadout: React.FC<{
         </div>
         <div style={{
           fontFamily: "monospace",
-          fontSize: 8,
-          color: "rgba(0,212,255,0.35)",
-          letterSpacing: "0.15em",
-          marginTop: 5,
+          fontSize: 11,
+          color: "rgba(0,212,255,0.5)",
+          letterSpacing: "0.12em",
+          marginTop: 6,
           textTransform: "uppercase",
-          maxWidth: 80,
+          maxWidth: 100,
           overflow: "hidden",
           textOverflow: "ellipsis",
           whiteSpace: "nowrap",
