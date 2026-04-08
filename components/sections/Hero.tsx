@@ -5,74 +5,6 @@ import { Player } from "@remotion/player";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { HeroComposition } from "@/components/remotion/HeroComposition";
 
-const bootLines = [
-  { text: "JARVIS SYSTEM v4.2.6", delay: 500 },
-  { text: "Neural network calibration", delay: 1200 },
-  { text: "Conference database loaded", delay: 2000 },
-  { text: "Biometric scan complete", delay: 2800 },
-  { text: "All systems operational.", delay: 3500 },
-];
-
-function BootPanel() {
-  const [phase, setPhase] = useState(0);
-
-  useEffect(() => {
-    const timers = bootLines.map((line, i) =>
-      setTimeout(() => setPhase(i + 1), line.delay)
-    );
-    return () => timers.forEach(clearTimeout);
-  }, []);
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, x: 20 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8, delay: 0.3 }}
-      className="hidden lg:flex flex-col gap-1.5 hud-panel rounded-lg p-4 min-w-[220px]"
-    >
-      <div className="font-mono text-[9px] text-accent-cyan/30 tracking-[0.2em] uppercase mb-1">
-        System_Status
-      </div>
-      {bootLines.map((line, i) => {
-        const done = phase > i;
-        const isLast = i === bootLines.length - 1;
-        return (
-          <div
-            key={i}
-            className={`flex items-center gap-2 font-mono text-[11px] transition-opacity duration-300 ${
-              done ? "opacity-100" : "opacity-20"
-            }`}
-          >
-            <span className={
-              done
-                ? isLast ? "text-accent-cyan" : "text-green-400/60"
-                : "text-text-muted/30"
-            }>
-              {done ? (isLast ? "▸" : "✓") : "○"}
-            </span>
-            <span className={
-              done
-                ? isLast ? "text-accent-cyan/70" : "text-text-secondary/70"
-                : "text-text-muted/30"
-            }>
-              {line.text}
-            </span>
-          </div>
-        );
-      })}
-      {/* Progress bar */}
-      <div className="mt-2 h-[2px] bg-accent-cyan/10 rounded-full overflow-hidden">
-        <motion.div
-          initial={{ width: "0%" }}
-          animate={{ width: phase >= bootLines.length ? "100%" : `${(phase / bootLines.length) * 100}%` }}
-          transition={{ duration: 0.5 }}
-          className="h-full bg-accent-cyan/40"
-        />
-      </div>
-    </motion.div>
-  );
-}
-
 export function Hero() {
   const { scrollY } = useScroll();
   const opacity = useTransform(scrollY, [0, 600], [1, 0]);
@@ -149,12 +81,7 @@ export function Hero() {
         </motion.a>
       </motion.div>
 
-      {/* Boot panel — right side */}
-      <motion.div style={{ opacity }} className="absolute right-6 top-1/2 -translate-y-1/2 z-10">
-        <BootPanel />
-      </motion.div>
-
-      {/* Scroll indicator */}
+{/* Scroll indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

@@ -49,7 +49,7 @@ export const HeroComposition: React.FC = () => {
       }}>
         {/* Badge */}
         <div style={{
-          fontSize: 11,
+          fontSize: 16,
           fontFamily: "monospace",
           color: "rgba(0,212,255,0.7)",
           letterSpacing: "0.15em",
@@ -69,7 +69,7 @@ export const HeroComposition: React.FC = () => {
           textAlign: "center",
         }}>
           <div style={{
-            fontSize: 96,
+            fontSize: 140,
             fontWeight: 800,
             lineHeight: 0.92,
             textShadow: "0 0 15px rgba(0,212,255,0.5), 0 0 50px rgba(0,212,255,0.15)",
@@ -78,7 +78,7 @@ export const HeroComposition: React.FC = () => {
             <span style={{ color: "#d4efff" }}> v praxi</span>
           </div>
           <div style={{
-            fontSize: 96,
+            fontSize: 140,
             fontWeight: 800,
             color: "rgba(90,143,170,0.8)",
             lineHeight: 0.92,
@@ -100,7 +100,7 @@ export const HeroComposition: React.FC = () => {
 
         {/* Subtitle */}
         <div style={{
-          fontSize: 22,
+          fontSize: 30,
           color: "rgba(90,143,170,0.9)",
           fontWeight: 300,
           textShadow: "0 0 8px rgba(0,212,255,0.3)",
