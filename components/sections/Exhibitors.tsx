@@ -8,7 +8,6 @@ const exhibitors: { name: string; logo: string | null }[] = [
   { name: "Microsoft", logo: null },
   { name: "EPRIN", logo: "/logo_vystavovatele/eprin.jpg" },
   { name: "UTB", logo: "/logo_vystavovatele/utb-bw-cz-full.svg" },
-  { name: "Ks-program", logo: null },
   { name: "Scheduling", logo: null },
 ];
 

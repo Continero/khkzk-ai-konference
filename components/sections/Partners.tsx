@@ -3,11 +3,11 @@
 import { ScrollReveal } from "@/components/ScrollReveal";
 
 const partners: { name: string; logo: string | null; tier: "hlavni" | "partner"; lightBg?: boolean }[] = [
-  { name: "Zlínský kraj", logo: "/logo_partneri/zlinskykraj.jpg", tier: "hlavni" },
   { name: "Generali", logo: "/logo_partneri/generali.png", tier: "hlavni", lightBg: true },
   { name: "eD system a.s.", logo: null, tier: "hlavni" },
   { name: "Aricoma", logo: "/logo_partneri/aricoma.png", tier: "partner" },
   { name: "Petrás Režek", logo: "/logo_partneri/petrasrezek.png", tier: "partner", lightBg: true },
+  { name: "Zlínský kraj", logo: "/logo_partneri/zlinskykraj.jpg", tier: "hlavni" },
 ];
 
 export function Partners() {
