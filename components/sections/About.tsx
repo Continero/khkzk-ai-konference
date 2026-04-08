@@ -3,7 +3,6 @@
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { RemotionInView } from "@/components/RemotionInView";
 import { DataReadout } from "@/components/remotion/DataReadout";
-import { SectionActivation } from "@/components/remotion/SectionActivation";
 
 const stats = [
   { value: "118", label: "RESPONDENTŮ", gauge: 0.85 },
@@ -26,20 +25,14 @@ export function About() {
   return (
     <section id="o-konferenci" className="relative py-28 px-6">
       <div className="max-w-6xl mx-auto">
-        {/* Remotion section header */}
-        <div className="h-[120px] sm:h-[200px] mb-6">
-          <RemotionInView
-            component={SectionActivation}
-            inputProps={{ sectionId: "01 // System_Intel", title: "AI v praxi — ne v teorii", subtitle: "Konference pro ty, kteří chtějí vědět jak na to" }}
-            durationInFrames={90}
-            width={800}
-            height={200}
-            style={{ width: "100%", height: "100%" }}
-          />
-        </div>
-
-        <ScrollReveal delay={0.1}>
-          <p className="text-lg text-text-secondary text-center max-w-3xl mx-auto mb-14 leading-relaxed">
+        <ScrollReveal>
+          <p className="font-mono text-[10px] text-accent-cyan/50 tracking-[0.3em] uppercase mb-3 text-center">
+            ▸ System_Intel
+          </p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-center holo-glow">
+            AI v praxi — ne v teorii
+          </h2>
+          <p className="text-text-secondary text-center mb-14 text-lg max-w-3xl mx-auto leading-relaxed">
             Program konference jsme postavili na datech z průzkumu mezi 118 firmami Zlínského kraje.
             Žádné buzzwordy — reálné příběhy firem, které AI nasadily a měří výsledky.
           </p>

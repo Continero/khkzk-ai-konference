@@ -1,8 +1,6 @@
 "use client";
 
 import { ScrollReveal } from "@/components/ScrollReveal";
-import { RemotionInView } from "@/components/RemotionInView";
-import { SectionActivation } from "@/components/remotion/SectionActivation";
 import { program } from "@/lib/data";
 
 export function Program() {
@@ -25,16 +23,17 @@ export function Program() {
   return (
     <section id="program" className="relative py-28 px-6">
       <div className="max-w-4xl mx-auto">
-        <div className="h-[120px] sm:h-[200px] mb-6">
-          <RemotionInView
-            component={SectionActivation}
-            inputProps={{ sectionId: "04 // Mission_Briefing", title: "Program", subtitle: "Témata a řečníci konference" }}
-            durationInFrames={90}
-            width={800}
-            height={200}
-            style={{ width: "100%", height: "100%" }}
-          />
-        </div>
+        <ScrollReveal>
+          <p className="font-mono text-[10px] text-accent-cyan/50 tracking-[0.3em] uppercase mb-3 text-center">
+            ▸ Mission_Briefing
+          </p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-center holo-glow">
+            Program
+          </h2>
+          <p className="text-text-secondary text-center mb-14 text-lg">
+            Témata a řečníci konference
+          </p>
+        </ScrollReveal>
 
         <div className="space-y-8">
           {grouped.map((block, bi) => (

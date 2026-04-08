@@ -4,24 +4,23 @@ import { motion } from "framer-motion";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { RemotionInView } from "@/components/RemotionInView";
 import { BiometricScan } from "@/components/remotion/BiometricScan";
-import { SectionActivation } from "@/components/remotion/SectionActivation";
 import { speakers } from "@/lib/data";
 
 export function Speakers() {
   return (
     <section id="recnici" className="relative py-28 px-6">
       <div className="max-w-6xl mx-auto">
-        {/* Remotion section header */}
-        <div className="h-[120px] sm:h-[200px] mb-6">
-          <RemotionInView
-            component={SectionActivation}
-            inputProps={{ sectionId: "03 // Personnel_Database", title: "Řečníci", subtitle: "Identifikovaní experti s ověřenými výsledky" }}
-            durationInFrames={90}
-            width={800}
-            height={200}
-            style={{ width: "100%", height: "100%" }}
-          />
-        </div>
+        <ScrollReveal>
+          <p className="font-mono text-[10px] text-accent-cyan/50 tracking-[0.3em] uppercase mb-3 text-center">
+            ▸ Personnel_Database
+          </p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-center holo-glow">
+            Řečníci
+          </h2>
+          <p className="text-text-secondary text-center mb-14 text-lg">
+            Identifikovaní experti s ověřenými výsledky
+          </p>
+        </ScrollReveal>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {speakers.map((speaker, i) => (
