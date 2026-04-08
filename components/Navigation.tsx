@@ -4,11 +4,11 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const links = [
-  { href: "#o-konferenci", label: "Intel" },
-  { href: "#temata", label: "Moduly" },
-  { href: "#recnici", label: "Personnel" },
-  { href: "#program", label: "Mission" },
-  { href: "#registrace", label: "Access" },
+  { href: "#o-konferenci", label: "Informace" },
+  { href: "#temata", label: "Témata" },
+  { href: "#recnici", label: "Řečníci" },
+  { href: "#program", label: "Program" },
+  { href: "#registrace", label: "Registrace" },
 ];
 
 const bootLines = [
