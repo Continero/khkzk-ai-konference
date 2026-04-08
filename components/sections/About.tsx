@@ -94,7 +94,20 @@ export function About() {
           </div>
         </ScrollReveal>
 
-        {/* Modules */}
+        {/* Transition: survey → conference response */}
+        <ScrollReveal>
+          <div className="flex items-center gap-4 mb-8">
+            <div className="flex-1 h-px bg-accent-cyan/15" />
+            <p className="font-mono text-[10px] text-accent-cyan/50 tracking-[0.3em] uppercase shrink-0">
+              ▸ Na základě dat stavíme konferenci
+            </p>
+            <div className="flex-1 h-px bg-accent-cyan/15" />
+          </div>
+          <h3 className="text-xl sm:text-2xl font-bold mb-8 text-center holo-glow">
+            Co vás na konferenci čeká
+          </h3>
+        </ScrollReveal>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {modules.map((m, i) => (
             <ScrollReveal key={m.id} delay={0.1 + i * 0.1}>
