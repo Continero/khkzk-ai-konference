@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-bg-deep: #091a1a;
-  --color-bg-surface: #0c2424;
+  --color-bg-deep: #071012;
+  --color-bg-surface: #0a1518;
   --color-bg-card: rgba(0, 180, 200, 0.04);
   --color-accent-blue: #00d4ff;
   --color-accent-blue-deep: #0088cc;
@@ -18,7 +18,7 @@
 html { scroll-behavior: smooth; font-size: 18px; }
 
 body {
-  background: #081818;
+  background: #060e10;
   color: var(--color-text-primary);
 }
 
