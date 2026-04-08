@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useRegistrationModal } from "@/components/RegistrationModal";
 
 const links = [
   { href: "#o-konferenci", label: "Intel" },
@@ -57,7 +56,6 @@ function BootStrip() {
 export function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { open: openRegistration } = useRegistrationModal();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -99,12 +97,12 @@ export function Navigation() {
                 {link.label}
               </a>
             ))}
-            <button
-              onClick={openRegistration}
-              className="ml-3 font-mono text-sm font-bold px-4 py-1.5 rounded bg-accent-cyan/10 text-accent-cyan border border-accent-cyan/20 hover:bg-accent-cyan/20 transition-colors tracking-wider uppercase cursor-pointer"
+            <a
+              href="#registrace"
+              className="ml-3 font-mono text-sm font-bold px-4 py-1.5 rounded bg-accent-cyan/10 text-accent-cyan border border-accent-cyan/20 hover:bg-accent-cyan/20 transition-colors tracking-wider uppercase"
             >
               Register_
-            </button>
+            </a>
           </div>
 
           <button
