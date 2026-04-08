@@ -205,21 +205,21 @@ export const program: ProgramBlock[] = [
 export const topics = [
   {
     icon: "brain",
-    title: "AI v podnikání",
+    title: "Strategie a adopce AI",
     description:
-      "Jak AI mění řízení firem, HR, zákaznický servis a rozhodování. Reálné case studies z českých SME.",
-  },
-  {
-    icon: "robot",
-    title: "Robotika v praxi",
-    description:
-      "Kolaborativní roboti, humanoidní asistenti, automatizace výroby. Live demo přímo na konferenci.",
+      "Jak nastavit prostředí, aby AI ve firmě dávala smysl. Architektura adopce, AI agenti v administrativě a realistický pohled na AI projekty.",
   },
   {
     icon: "code",
-    title: "Technologie & nástroje",
+    title: "Nástroje pro každý den",
     description:
-      "Microsoft Copilot, AI agenti, lokální AI na zařízeních. Praktické nástroje, které můžete nasadit hned.",
+      "Microsoft Copilot, AI agenti v Outlooku a dalších nástrojích. Praktické ukázky toho, co digitální zaměstnanec reálně odpracuje.",
+  },
+  {
+    icon: "robot",
+    title: "Průmysl a budoucnost",
+    description:
+      "Strojové vidění ve výrobě, humanoidní robot naživo. Jak AI vidí do procesů fabriky a co z dat dokáže vytáhnout.",
   },
 ] as const;
 
