@@ -22,12 +22,12 @@ function BootLine({ text, startFrame }: { text: string; startFrame: number }) {
 
   return (
     <div style={{ opacity, fontFamily: "monospace", fontSize: 13, marginBottom: 6, display: "flex", alignItems: "center", gap: 8 }}>
-      <span style={{ color: isComplete ? (isLast ? "#00d4ff" : "rgba(74, 222, 128, 0.6)") : "rgba(0, 212, 255, 0.5)", width: 14 }}>
+      <span style={{ color: isComplete ? (isLast ? "#2ec4b6" : "rgba(74, 222, 128, 0.6)") : "rgba(46, 196, 182, 0.5)", width: 14 }}>
         {isComplete ? (isLast ? "▸" : "✓") : "○"}
       </span>
-      <span style={{ color: isComplete && isLast ? "#00d4ff" : "rgba(212, 239, 255, 0.6)" }}>
+      <span style={{ color: isComplete && isLast ? "#2ec4b6" : "rgba(212, 239, 255, 0.6)" }}>
         {displayed}
-        {!isComplete && <span style={{ animation: "blink 0.5s step-end infinite", color: "#00d4ff" }}>▌</span>}
+        {!isComplete && <span style={{ animation: "blink 0.5s step-end infinite", color: "#2ec4b6" }}>▌</span>}
       </span>
     </div>
   );
@@ -44,8 +44,8 @@ function ScanLine() {
       left: 0, right: 0,
       top: `${progress}%`,
       height: 2,
-      background: "linear-gradient(90deg, transparent 0%, rgba(0,212,255,0.5) 30%, rgba(0,212,255,0.8) 50%, rgba(0,212,255,0.5) 70%, transparent 100%)",
-      boxShadow: "0 0 15px rgba(0,212,255,0.4), 0 0 30px rgba(0,212,255,0.1)",
+      background: "linear-gradient(90deg, transparent 0%, rgba(46,196,182,0.5) 30%, rgba(46,196,182,0.8) 50%, rgba(46,196,182,0.5) 70%, transparent 100%)",
+      boxShadow: "0 0 15px rgba(46,196,182,0.4), 0 0 30px rgba(46,196,182,0.1)",
       opacity,
       pointerEvents: "none",
     }} />
@@ -64,10 +64,10 @@ function StatusBar() {
   return (
     <div style={{ opacity, marginTop: 20, display: "flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
       {/* Progress bar */}
-      <div style={{ width: 200, height: 2, background: "rgba(0,212,255,0.1)", borderRadius: 1, overflow: "hidden" }}>
-        <div style={{ width: `${barProgress}%`, height: "100%", background: "rgba(0,212,255,0.6)", transition: "none" }} />
+      <div style={{ width: 200, height: 2, background: "rgba(46,196,182,0.1)", borderRadius: 1, overflow: "hidden" }}>
+        <div style={{ width: `${barProgress}%`, height: "100%", background: "rgba(46,196,182,0.6)", transition: "none" }} />
       </div>
-      <span style={{ fontFamily: "monospace", fontSize: 10, color: "rgba(0,212,255,0.4)", letterSpacing: "0.2em" }}>
+      <span style={{ fontFamily: "monospace", fontSize: 10, color: "rgba(46,196,182,0.4)", letterSpacing: "0.2em" }}>
         SYSTEM READY — {Math.round(barProgress)}%
       </span>
     </div>
@@ -85,7 +85,7 @@ export const BootSequence: React.FC = () => {
       {/* Initial flash */}
       <div style={{
         position: "absolute", inset: 0,
-        background: "rgba(0,212,255,0.1)",
+        background: "rgba(46,196,182,0.1)",
         opacity: flashOpacity,
         pointerEvents: "none",
       }} />

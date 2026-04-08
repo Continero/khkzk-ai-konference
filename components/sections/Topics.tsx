@@ -57,7 +57,7 @@ export function Topics() {
                     Module_{String(i + 1).padStart(2, "0")} // {topic.icon}
                   </div>
 
-                  <div className="text-accent-cyan mb-4 group-hover:drop-shadow-[0_0_8px_rgba(0,212,255,0.4)] transition-all">
+                  <div className="text-accent-cyan mb-4 group-hover:drop-shadow-[0_0_8px_rgba(46,196,182,0.4)] transition-all">
                     {icons[topic.icon]}
                   </div>
 

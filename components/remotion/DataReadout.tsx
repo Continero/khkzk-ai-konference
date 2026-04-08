@@ -11,7 +11,7 @@ function ArcGauge({ progress, radius, color, frame }: { progress: number; radius
   return (
     <svg width={radius * 2 + 14} height={radius * 2 + 14} style={{ position: "absolute", top: "50%", left: "50%", transform: `translate(-50%, -50%) rotate(${-90 + rotation}deg)` }}>
       {/* Background ring */}
-      <circle cx={radius + 7} cy={radius + 7} r={radius} fill="none" stroke="rgba(0,212,255,0.06)" strokeWidth={1.5} />
+      <circle cx={radius + 7} cy={radius + 7} r={radius} fill="none" stroke="rgba(46,196,182,0.06)" strokeWidth={1.5} />
       {/* Tick marks */}
       {Array.from({ length: 24 }).map((_, i) => {
         const angle = (i / 24) * 360;
@@ -20,7 +20,7 @@ function ArcGauge({ progress, radius, color, frame }: { progress: number; radius
         const y1 = (radius + 7) + Math.sin(rad) * (radius - 3);
         const x2 = (radius + 7) + Math.cos(rad) * (radius + 1);
         const y2 = (radius + 7) + Math.sin(rad) * (radius + 1);
-        return <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke="rgba(0,212,255,0.08)" strokeWidth={0.5} />;
+        return <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke="rgba(46,196,182,0.08)" strokeWidth={0.5} />;
       })}
       {/* Progress arc */}
       <circle
@@ -82,17 +82,17 @@ export const DataReadout: React.FC<{
       opacity: opacity * flicker,
       transform: `scale(${scale})`,
     }}>
-      <div style={{ position: "absolute", inset: 0, background: "rgba(0,212,255,0.1)", opacity: scanFlash }} />
+      <div style={{ position: "absolute", inset: 0, background: "rgba(46,196,182,0.1)", opacity: scanFlash }} />
 
-      <ArcGauge progress={gaugeAnim} radius={52} color="rgba(0,212,255,0.4)" frame={frame} />
+      <ArcGauge progress={gaugeAnim} radius={52} color="rgba(46,196,182,0.4)" frame={frame} />
 
       <div style={{ textAlign: "center", position: "relative", zIndex: 1 }}>
         <div style={{
           fontFamily: "monospace",
           fontSize: 32,
           fontWeight: 700,
-          color: "#00d4ff",
-          textShadow: `0 0 ${8 + glowPulse * 4}px rgba(0,212,255,${0.4 + glowPulse * 0.2}), 0 0 25px rgba(0,212,255,0.1)`,
+          color: "#2ec4b6",
+          textShadow: `0 0 ${8 + glowPulse * 4}px rgba(46,196,182,${0.4 + glowPulse * 0.2}), 0 0 25px rgba(46,196,182,0.1)`,
           lineHeight: 1,
         }}>
           {displayValue}
@@ -100,7 +100,7 @@ export const DataReadout: React.FC<{
         <div style={{
           fontFamily: "monospace",
           fontSize: 11,
-          color: "rgba(0,212,255,0.5)",
+          color: "rgba(46,196,182,0.5)",
           letterSpacing: "0.12em",
           marginTop: 6,
           textTransform: "uppercase",

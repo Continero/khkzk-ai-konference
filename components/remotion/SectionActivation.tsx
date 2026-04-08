@@ -36,8 +36,8 @@ export const SectionActivation: React.FC<{
         position: "absolute",
         top: "50%", left: `${scanX}%`,
         width: 100, height: 1,
-        background: "linear-gradient(90deg, transparent, rgba(0,212,255,0.6), transparent)",
-        boxShadow: "0 0 10px rgba(0,212,255,0.3)",
+        background: "linear-gradient(90deg, transparent, rgba(46,196,182,0.6), transparent)",
+        boxShadow: "0 0 10px rgba(46,196,182,0.3)",
         opacity: scanOpacity,
         transform: "translateY(-50%)",
       }} />
@@ -46,7 +46,7 @@ export const SectionActivation: React.FC<{
       <div style={{
         fontFamily: "monospace",
         fontSize: 10,
-        color: "rgba(0,212,255,0.4)",
+        color: "rgba(46,196,182,0.4)",
         letterSpacing: "0.3em",
         marginBottom: 12,
         opacity: idOpacity,
@@ -60,7 +60,7 @@ export const SectionActivation: React.FC<{
         fontSize: 48,
         fontWeight: 700,
         color: "#d4efff",
-        textShadow: "0 0 10px rgba(0,212,255,0.4), 0 0 30px rgba(0,212,255,0.1)",
+        textShadow: "0 0 10px rgba(46,196,182,0.4), 0 0 30px rgba(46,196,182,0.1)",
         opacity: titleOpacity * flicker,
         filter: `blur(${titleBlur}px) brightness(${titleBright})`,
         textAlign: "center",
@@ -73,7 +73,7 @@ export const SectionActivation: React.FC<{
       <div style={{
         width: 120,
         height: 1,
-        background: "linear-gradient(90deg, transparent, rgba(0,212,255,0.4), transparent)",
+        background: "linear-gradient(90deg, transparent, rgba(46,196,182,0.4), transparent)",
         margin: "14px 0",
         transform: `scaleX(${lineScale})`,
       }} />

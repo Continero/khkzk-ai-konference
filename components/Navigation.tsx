@@ -8,7 +8,6 @@ const links = [
   { href: "#temata", label: "Témata" },
   { href: "#recnici", label: "Řečníci" },
   { href: "#program", label: "Program" },
-  { href: "#registrace", label: "Registrace" },
 ];
 
 const bootLines = [

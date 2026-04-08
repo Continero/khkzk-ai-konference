@@ -127,7 +127,7 @@ export function Hero() {
           transition={{ delay: 2.5, duration: 0.5 }}
           className="flex gap-3"
         >
-          <span className="font-mono text-sm font-bold text-accent-cyan px-5 py-2 hud-panel rounded border border-accent-cyan/30 shadow-[0_0_12px_rgba(0,212,255,0.15)]">
+          <span className="font-mono text-sm font-bold text-accent-cyan px-5 py-2 hud-panel rounded border border-accent-cyan/30 shadow-[0_0_12px_rgba(46,196,182,0.15)]">
             20. května 2026
           </span>
           <span className="font-mono text-sm text-text-secondary px-5 py-2 hud-panel rounded">
@@ -143,7 +143,7 @@ export function Hero() {
           transition={{ delay: 3, duration: 0.5 }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.97 }}
-          className="font-mono text-sm font-bold uppercase tracking-[0.15em] text-bg-deep bg-accent-cyan px-8 py-2.5 shadow-[0_0_25px_rgba(0,212,255,0.25)] hover:shadow-[0_0_40px_rgba(0,212,255,0.4)] transition-shadow cursor-pointer"
+          className="font-mono text-sm font-bold uppercase tracking-[0.15em] text-bg-deep bg-accent-cyan px-8 py-2.5 shadow-[0_0_25px_rgba(46,196,182,0.25)] hover:shadow-[0_0_40px_rgba(46,196,182,0.4)] transition-shadow cursor-pointer"
         >
           Registrace_
         </motion.a>

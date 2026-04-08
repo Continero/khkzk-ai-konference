@@ -36,11 +36,11 @@ export function Footer() {
             <h3 className="font-mono text-xs text-accent-cyan/50 tracking-widest uppercase mb-3">
               // Kontakt
             </h3>
-            <p className="text-text-secondary text-base">Renata Brázdilová</p>
-            <a href="mailto:brazdilova@khkzk.cz" className="text-accent-cyan text-sm font-mono hover:underline">
-              brazdilova@khkzk.cz
+            <p className="text-text-secondary text-base">Ivona Prusenovská</p>
+            <a href="mailto:prusenovska@khkzk.cz" className="text-accent-cyan text-sm font-mono hover:underline">
+              prusenovska@khkzk.cz
             </a>
-            <p className="text-text-muted text-sm font-mono mt-1">+420 735 746 862</p>
+            <p className="text-text-muted text-sm font-mono mt-1">+420 733 355 833</p>
           </div>
         </div>
 
