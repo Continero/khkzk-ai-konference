@@ -2,8 +2,6 @@
 
 import { motion } from "framer-motion";
 import { ScrollReveal } from "@/components/ScrollReveal";
-import { RemotionInView } from "@/components/RemotionInView";
-import { SectionActivation } from "@/components/remotion/SectionActivation";
 import { topics } from "@/lib/data";
 
 const icons: Record<string, React.ReactNode> = {
@@ -39,16 +37,17 @@ export function Topics() {
   return (
     <section id="temata" className="relative py-28 px-6">
       <div className="max-w-5xl mx-auto">
-        <div className="h-[120px] sm:h-[200px] mb-6">
-          <RemotionInView
-            component={SectionActivation}
-            inputProps={{ sectionId: "02 // Core_Modules", title: "Co vás na konferenci čeká", subtitle: "Tři pilíře programu — všechny zaměřené na praxi" }}
-            durationInFrames={90}
-            width={800}
-            height={200}
-            style={{ width: "100%", height: "100%" }}
-          />
-        </div>
+        <ScrollReveal>
+          <p className="font-mono text-[10px] text-accent-cyan/50 tracking-[0.3em] uppercase mb-3 text-center">
+            ▸ Core_Modules
+          </p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-center holo-glow">
+            Co vás na konferenci čeká
+          </h2>
+          <p className="text-text-secondary text-center mb-14 text-lg">
+            Tři pilíře programu — všechny zaměřené na praxi
+          </p>
+        </ScrollReveal>
 
         {/* Theme cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
