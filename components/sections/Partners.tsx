@@ -27,7 +27,7 @@ export function Partners() {
           {partners.map((partner, i) => (
             <ScrollReveal key={partner.name} delay={0.05 + i * 0.08}>
               <div
-                className={`rounded-lg px-8 py-5 flex items-center justify-center transition-all min-w-[140px] border border-white/10 hover:border-white/20 ${
+                className={`rounded-lg px-6 py-4 flex items-center justify-center transition-all min-w-[180px] min-h-[80px] border border-white/10 hover:border-white/20 ${
                   partner.tier === "hlavni" ? "border-accent-cyan/20" : ""
                 }`}
                 style={{ background: "rgba(255,255,255,0.92)" }}
@@ -36,7 +36,7 @@ export function Partners() {
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="h-10 sm:h-12 object-contain transition-opacity"
+                    className="h-14 sm:h-16 max-w-[200px] object-contain transition-opacity"
                   />
                 ) : (
                   <span className="font-mono text-sm text-text-secondary opacity-70">{partner.name}</span>
