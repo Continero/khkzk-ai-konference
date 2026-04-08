@@ -82,7 +82,7 @@ exports.handler = async function (event) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "AI konference 2026 <onboarding@resend.dev>",
+        from: "AI konference 2026 <registrace@notifications.continero.com>",
         to: [NOTIFICATION_EMAIL],
         subject: "Online přihláška na kurz",
         html: html,
