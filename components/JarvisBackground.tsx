@@ -207,7 +207,7 @@ export function JarvisBackground() {
     <canvas
       ref={canvasRef}
       className="fixed inset-0 z-0 pointer-events-none"
-      style={{ background: "linear-gradient(180deg, #050d0e 0%, #071214 50%, #091518 100%)" }}
+      style={{ background: "linear-gradient(180deg, #060a14 0%, #081020 50%, #0a1428 100%)" }}
     />
   );
 }
