@@ -2,11 +2,11 @@
 
 import { ScrollReveal } from "@/components/ScrollReveal";
 
-const partners: { name: string; logo: string | null; tier: "hlavni" | "partner"; lightBg?: boolean }[] = [
-  { name: "Generali", logo: "/logo_partneri/generali.png", tier: "hlavni", lightBg: true },
-  { name: "eD system / Microsoft", logo: "/logo_partneri/eD_microsoft.jpg", tier: "hlavni", lightBg: true },
+const partners: { name: string; logo: string | null; tier: "hlavni" | "partner" }[] = [
+  { name: "Generali", logo: "/logo_partneri/generali.png", tier: "hlavni" },
+  { name: "eD system / Microsoft", logo: "/logo_partneri/eD_microsoft.jpg", tier: "hlavni" },
   { name: "Aricoma", logo: "/logo_partneri/aricoma.png", tier: "partner" },
-  { name: "Petrás Režek", logo: "/logo_partneri/petrasrezek-svetle-pozadi.png", tier: "partner", lightBg: true },
+  { name: "Petrás Režek", logo: "/logo_partneri/petrasrezek-svetle-pozadi.png", tier: "partner" },
   { name: "Zlínský kraj", logo: "/logo_partneri/zlinskykraj.jpg", tier: "hlavni" },
 ];
 
@@ -26,14 +26,17 @@ export function Partners() {
         <div className="flex flex-wrap items-center justify-center gap-6">
           {partners.map((partner, i) => (
             <ScrollReveal key={partner.name} delay={0.05 + i * 0.08}>
-              <div className={`hud-panel rounded-lg px-8 py-5 flex items-center justify-center transition-all hover:bg-[rgba(0,160,255,0.06)] min-w-[140px] ${
-                partner.tier === "hlavni" ? "border-accent-cyan/20" : ""
-              } ${partner.lightBg ? "bg-white/90 hover:bg-white" : ""}`}>
+              <div
+                className={`rounded-lg px-8 py-5 flex items-center justify-center transition-all min-w-[140px] border border-white/10 hover:border-white/20 ${
+                  partner.tier === "hlavni" ? "border-accent-cyan/20" : ""
+                }`}
+                style={{ background: "rgba(255,255,255,0.92)" }}
+              >
                 {partner.logo ? (
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className={`h-10 sm:h-12 object-contain ${partner.lightBg ? "opacity-100" : "opacity-80 hover:opacity-100"} transition-opacity`}
+                    className="h-10 sm:h-12 object-contain transition-opacity"
                   />
                 ) : (
                   <span className="font-mono text-sm text-text-secondary opacity-70">{partner.name}</span>
