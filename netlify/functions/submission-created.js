@@ -1,5 +1,5 @@
 // Triggered automatically by Netlify when a form submission is created.
-// Sends a formatted email matching the KHKZK format exactly.
+// Sends an HTML-formatted email matching the KHKZK format exactly.
 
 exports.handler = async function (event) {
   const { RESEND_API_KEY, NOTIFICATION_EMAIL = "info@khkzk.cz" } = process.env;
@@ -32,39 +32,47 @@ exports.handler = async function (event) {
     });
   }
 
-  // Format email body — matching KHKZK format exactly
-  const lines = [
+  // Build participant HTML — each on one line with bold labels
+  const participantHtml = participants
+    .map(
+      (p) =>
+        `<b>Jméno:</b> ${esc(p.jmeno)}&nbsp; <b>Pozice:</b> ${esc(p.pozice)}&nbsp; <b>E-mail:</b> <a href="mailto:${esc(p.email)}">${esc(p.email)}</a>&nbsp; <b>Telefonní číslo:</b> ${esc(p.telefon)}`
+    )
+    .join("<br>\n");
+
+  // HTML email matching KHKZK format
+  const html = `<div style="font-family: sans-serif; font-size: 14px; color: #333;">
+<p><b>Zpráva z kontaktního formuláře www stránek</b>&nbsp; <a href="https://aivpraxi.khkzk.cz">aivpraxi.khkzk.cz</a></p>
+<table cellpadding="4" cellspacing="0" style="font-size: 14px;">
+  <tr><td><b>Název stránky</b></td><td>AI konference 2026</td></tr>
+  <tr><td><b>URL</b></td><td><a href="https://aivpraxi.khkzk.cz">https://aivpraxi.khkzk.cz</a></td></tr>
+  <tr><td><b>Název organizace</b></td><td>${esc(data.organizace || "")}</td></tr>
+  <tr><td><b>Ičo</b></td><td>${esc(data.ico || "")}</td></tr>
+  <tr><td><b>Kurz</b></td><td>AI konference 2026</td></tr>
+</table>
+
+<h3 style="margin: 20px 0 10px 0;">Účastníci</h3>
+<p>${participantHtml}</p>
+
+<p>Poznámka:<br>${esc(data.poznamka || "")}</p>
+</div>`;
+
+  // Plain text fallback
+  const textLines = [
     "Zpráva z kontaktního formuláře www stránek",
-    "KHK.cz",
-    "Název stránky",
-    "AI konference 2026",
-    "URL",
-    "https://aivpraxi.khkzk.cz",
-    "Název organizace",
-    data.organizace || "",
-    "Ičo",
-    data.ico || "",
-    "Kurz",
-    "AI konference 2026",
+    "aivpraxi.khkzk.cz",
+    "Název stránky: AI konference 2026",
+    "URL: https://aivpraxi.khkzk.cz",
+    `Název organizace: ${data.organizace || ""}`,
+    `Ičo: ${data.ico || ""}`,
+    "Kurz: AI konference 2026",
+    "",
     "Účastníci",
   ];
-
-  participants.forEach((p, i) => {
-    lines.push("Jméno:");
-    lines.push(p.jmeno);
-    lines.push("Pozice:");
-    lines.push(p.pozice);
-    lines.push("E-mail:");
-    lines.push(p.email);
-    lines.push("Telefonní číslo:");
-    lines.push(p.telefon);
+  participants.forEach((p) => {
+    textLines.push(`Jméno: ${p.jmeno}  Pozice: ${p.pozice}  E-mail: ${p.email}  Telefonní číslo: ${p.telefon}`);
   });
-
-  lines.push("");
-  lines.push("Poznámka:");
-  lines.push(data.poznamka || "");
-
-  const textBody = lines.join("\n");
+  textLines.push("", `Poznámka: ${data.poznamka || ""}`);
 
   try {
     const res = await fetch("https://api.resend.com/emails", {
@@ -77,7 +85,8 @@ exports.handler = async function (event) {
         from: "AI konference 2026 <onboarding@resend.dev>",
         to: [NOTIFICATION_EMAIL],
         subject: "Online přihláška na kurz",
-        text: textBody,
+        html: html,
+        text: textLines.join("\n"),
       }),
     });
 
@@ -93,3 +102,11 @@ exports.handler = async function (event) {
     return { statusCode: 200, body: "Email failed but submission saved" };
   }
 };
+
+function esc(str) {
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
