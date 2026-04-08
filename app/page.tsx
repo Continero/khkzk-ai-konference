@@ -8,7 +8,7 @@ import { Gallery } from "@/components/sections/Gallery";
 import { RobotAnalysis } from "@/components/sections/RobotAnalysis";
 import { Topics } from "@/components/sections/Topics";
 import { Speakers } from "@/components/sections/Speakers";
-import { Testimonials } from "@/components/sections/Testimonials";
+
 import { Program } from "@/components/sections/Program";
 import { Venue } from "@/components/sections/Venue";
 import { Registration } from "@/components/sections/Registration";
@@ -30,7 +30,7 @@ export default function Home() {
           <RobotAnalysis />
           <Topics />
           <Speakers />
-          <Testimonials />
+
           <Program />
           <Venue />
           <Registration />
