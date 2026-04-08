@@ -99,7 +99,7 @@ export function Navigation() {
               href="#registrace"
               className="ml-3 font-mono text-sm font-bold px-4 py-1.5 rounded bg-accent-cyan/10 text-accent-cyan border border-accent-cyan/20 hover:bg-accent-cyan/20 transition-colors tracking-wider uppercase"
             >
-              Register_
+              Registrace
             </a>
           </div>
 

@@ -117,7 +117,7 @@ export function JarvisBackground() {
           ctx.beginPath();
           ctx.moveTo(a.x, ay);
           ctx.lineTo(b.x, by);
-          ctx.strokeStyle = `rgba(46, 196, 182, ${alpha})`;
+          ctx.strokeStyle = `rgba(0, 212, 255, ${alpha})`;
           ctx.lineWidth = 0.4;
           ctx.stroke();
         }
@@ -134,15 +134,15 @@ export function JarvisBackground() {
 
       ctx.beginPath();
       ctx.arc(p.x, sy, p.radius, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(46, 196, 182, ${alpha})`;
+      ctx.fillStyle = `rgba(0, 212, 255, ${alpha})`;
       ctx.shadowBlur = 6;
-      ctx.shadowColor = "rgba(46, 196, 182, 0.3)";
+      ctx.shadowColor = "rgba(0, 212, 255, 0.3)";
       ctx.fill();
       ctx.shadowBlur = 0;
     }
 
     // Draw grid perspective lines (subtle)
-    ctx.strokeStyle = "rgba(46, 196, 182, 0.015)";
+    ctx.strokeStyle = "rgba(0, 212, 255, 0.015)";
     ctx.lineWidth = 0.5;
     const gridSize = 80;
     const offsetY = -(scroll * 0.3) % gridSize;

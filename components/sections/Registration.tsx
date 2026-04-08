@@ -38,7 +38,7 @@ export function Registration() {
           <ScrollReveal delay={0.1}>
             <motion.div
               whileHover={{ y: -4 }}
-              className="hud-panel rounded-lg overflow-hidden h-full flex flex-col shadow-[0_0_30px_rgba(46,196,182,0.06)]"
+              className="hud-panel rounded-lg overflow-hidden h-full flex flex-col shadow-[0_0_30px_rgba(0,212,255,0.06)]"
             >
               <div className="h-[2px] bg-gradient-to-r from-transparent via-accent-cyan to-transparent" />
               <div className="p-7 flex flex-col flex-1">
@@ -60,7 +60,7 @@ export function Registration() {
                 </div>
                 <button
                   onClick={open}
-                  className="block w-full py-3 rounded text-center font-mono text-base font-bold tracking-wider uppercase transition-all bg-accent-cyan text-bg-deep shadow-[0_0_20px_rgba(46,196,182,0.2)] hover:shadow-[0_0_30px_rgba(46,196,182,0.35)] mt-auto cursor-pointer"
+                  className="block w-full py-3 rounded text-center font-mono text-base font-bold tracking-wider uppercase transition-all bg-accent-cyan text-bg-deep shadow-[0_0_20px_rgba(0,212,255,0.2)] hover:shadow-[0_0_30px_rgba(0,212,255,0.35)] mt-auto cursor-pointer"
                 >
                   Registrovat_
                 </button>

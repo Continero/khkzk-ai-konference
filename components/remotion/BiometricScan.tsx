@@ -38,8 +38,8 @@ export const BiometricScan: React.FC<{
         left: 0, right: 0,
         top: `${scanY}%`,
         height: 2,
-        background: `linear-gradient(90deg, transparent 0%, rgba(46,196,182,0.6) 20%, rgba(46,196,182,0.8) 50%, rgba(46,196,182,0.6) 80%, transparent 100%)`,
-        boxShadow: "0 0 12px rgba(46,196,182,0.4)",
+        background: `linear-gradient(90deg, transparent 0%, rgba(0,212,255,0.6) 20%, rgba(0,212,255,0.8) 50%, rgba(0,212,255,0.6) 80%, transparent 100%)`,
+        boxShadow: "0 0 12px rgba(0,212,255,0.4)",
         opacity: scanOpacity,
         pointerEvents: "none",
       }} />
@@ -58,7 +58,7 @@ export const BiometricScan: React.FC<{
             ...Object.fromEntries(Object.entries(pos).filter(([k]) => ["top", "left", "right", "bottom"].includes(k)).map(([k, v]) => [k, v])),
             width: 16 * bracketSize,
             height: 16 * bracketSize,
-            borderColor: "rgba(46,196,182,0.4)",
+            borderColor: "rgba(0,212,255,0.4)",
             borderStyle: "solid",
             borderWidth: 0,
             ...(pos.borderTop ? { borderTopWidth: 1 } : {}),
@@ -77,11 +77,11 @@ export const BiometricScan: React.FC<{
       >
         <circle
           cx="80" cy="80" r={arcRadius}
-          fill="none" stroke="rgba(46,196,182,0.1)" strokeWidth={1}
+          fill="none" stroke="rgba(0,212,255,0.1)" strokeWidth={1}
         />
         <circle
           cx="80" cy="80" r={arcRadius}
-          fill="none" stroke="rgba(46,196,182,0.35)" strokeWidth={1.5}
+          fill="none" stroke="rgba(0,212,255,0.35)" strokeWidth={1.5}
           strokeDasharray={arcCircumference}
           strokeDashoffset={arcCircumference * (1 - arcProgress)}
           strokeLinecap="round"
@@ -92,7 +92,7 @@ export const BiometricScan: React.FC<{
       <div style={{
         position: "absolute", bottom: 8, left: 10,
         fontFamily: "monospace", fontSize: 11,
-        color: "rgba(46,196,182,0.5)",
+        color: "rgba(0,212,255,0.5)",
         opacity: idBlink,
       }}>
         {speakerId}

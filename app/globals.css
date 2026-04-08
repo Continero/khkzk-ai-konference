@@ -1,29 +1,29 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-bg-deep: #0a1018;
-  --color-bg-surface: #0e1a24;
-  --color-bg-card: rgba(0, 180, 170, 0.04);
-  --color-accent-blue: #2ec4b6;
-  --color-accent-blue-deep: #1a8a7f;
-  --color-accent-gold: #e8b84a;
-  --color-accent-gold-light: #f0cc6e;
-  --color-accent-cyan: #2ec4b6;
-  --color-text-primary: #e4f0ef;
-  --color-text-secondary: #8cbab4;
-  --color-text-muted: #4d8a84;
+  --color-bg-deep: #091214;
+  --color-bg-surface: #0c1a1e;
+  --color-bg-card: rgba(0, 180, 200, 0.04);
+  --color-accent-blue: #00d4ff;
+  --color-accent-blue-deep: #0088cc;
+  --color-accent-gold: #ff9f1c;
+  --color-accent-gold-light: #ffbf69;
+  --color-accent-cyan: #00d4ff;
+  --color-text-primary: #e8f4ff;
+  --color-text-secondary: #8bb8d0;
+  --color-text-muted: #4a7a95;
   --font-sans: var(--font-inter);
 }
 
 html { scroll-behavior: smooth; font-size: 18px; }
 
 body {
-  background: #0a1018;
+  background: #091214;
   color: var(--color-text-primary);
 }
 
 ::selection {
-  background: rgba(46, 196, 182, 0.3);
+  background: rgba(0, 212, 255, 0.3);
   color: #fff;
 }
 
@@ -43,16 +43,16 @@ body {
 /* === JARVIS CORE EFFECTS === */
 
 .holo-glow {
-  text-shadow: 0 0 8px rgba(46, 196, 182, 0.4), 0 0 25px rgba(46, 196, 182, 0.1);
+  text-shadow: 0 0 8px rgba(0, 212, 255, 0.4), 0 0 25px rgba(0, 212, 255, 0.1);
 }
 
 .holo-glow-strong {
-  text-shadow: 0 0 12px rgba(46, 196, 182, 0.6), 0 0 40px rgba(46, 196, 182, 0.15);
+  text-shadow: 0 0 12px rgba(0, 212, 255, 0.6), 0 0 40px rgba(0, 212, 255, 0.15);
 }
 
 .hud-panel {
-  background: rgba(46, 196, 182, 0.05);
-  border: 1px solid rgba(46, 196, 182, 0.14);
+  background: rgba(0, 212, 255, 0.05);
+  border: 1px solid rgba(0, 212, 255, 0.14);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   position: relative;
@@ -63,8 +63,8 @@ body {
   position: absolute;
   top: 0; left: 0;
   width: 20px; height: 20px;
-  border-top: 1px solid rgba(46, 196, 182, 0.4);
-  border-left: 1px solid rgba(46, 196, 182, 0.4);
+  border-top: 1px solid rgba(0, 212, 255, 0.4);
+  border-left: 1px solid rgba(0, 212, 255, 0.4);
   pointer-events: none;
 }
 
@@ -73,14 +73,14 @@ body {
   position: absolute;
   bottom: 0; right: 0;
   width: 20px; height: 20px;
-  border-bottom: 1px solid rgba(46, 196, 182, 0.4);
-  border-right: 1px solid rgba(46, 196, 182, 0.4);
+  border-bottom: 1px solid rgba(0, 212, 255, 0.4);
+  border-right: 1px solid rgba(0, 212, 255, 0.4);
   pointer-events: none;
 }
 
 .hud-panel:hover {
   background: rgba(0, 160, 255, 0.10);
-  border-color: rgba(46, 196, 182, 0.28);
+  border-color: rgba(0, 212, 255, 0.28);
 }
 
 /* Scan lines overlay */
@@ -92,8 +92,8 @@ body {
     0deg,
     transparent,
     transparent 2px,
-    rgba(46, 196, 182, 0.012) 2px,
-    rgba(46, 196, 182, 0.012) 4px
+    rgba(0, 212, 255, 0.012) 2px,
+    rgba(0, 212, 255, 0.012) 4px
   );
   pointer-events: none;
   z-index: 9999;
@@ -138,7 +138,7 @@ body {
 /* Wireframe grid bg */
 .wire-grid {
   background-image:
-    linear-gradient(rgba(46, 196, 182, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(46, 196, 182, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
   background-size: 60px 60px;
 }

@@ -6,7 +6,7 @@ const partners: { name: string; logo: string | null; tier: "hlavni" | "partner";
   { name: "Generali", logo: "/logo_partneri/generali.png", tier: "hlavni", lightBg: true },
   { name: "eD system / Microsoft", logo: "/logo_partneri/eD_microsoft.jpg", tier: "hlavni", lightBg: true },
   { name: "Aricoma", logo: "/logo_partneri/aricoma.png", tier: "partner" },
-  { name: "Petrás Režek", logo: "/logo_partneri/petrasrezek.png", tier: "partner", lightBg: true },
+  { name: "Petrás Režek", logo: "/logo_partneri/petrasrezek-svetle-pozadi.png", tier: "partner" },
   { name: "Zlínský kraj", logo: "/logo_partneri/zlinskykraj.jpg", tier: "hlavni" },
 ];
 

@@ -51,11 +51,11 @@ export const HeroComposition: React.FC = () => {
         <div style={{
           fontSize: 11,
           fontFamily: "monospace",
-          color: "rgba(46,196,182,0.7)",
+          color: "rgba(0,212,255,0.7)",
           letterSpacing: "0.15em",
           marginBottom: 16,
           padding: "4px 12px",
-          border: "1px solid rgba(46,196,182,0.15)",
+          border: "1px solid rgba(0,212,255,0.15)",
           textTransform: "uppercase",
           opacity: badgeOp,
         }}>
@@ -72,9 +72,9 @@ export const HeroComposition: React.FC = () => {
             fontSize: 96,
             fontWeight: 800,
             lineHeight: 0.92,
-            textShadow: "0 0 15px rgba(46,196,182,0.5), 0 0 50px rgba(46,196,182,0.15)",
+            textShadow: "0 0 15px rgba(0,212,255,0.5), 0 0 50px rgba(0,212,255,0.15)",
           }}>
-            <span style={{ color: "#2ec4b6" }}>AI</span>
+            <span style={{ color: "#00d4ff" }}>AI</span>
             <span style={{ color: "#d4efff" }}> v praxi</span>
           </div>
           <div style={{
@@ -93,7 +93,7 @@ export const HeroComposition: React.FC = () => {
           width: 150,
           height: 1,
           margin: "16px 0",
-          background: "linear-gradient(90deg, transparent, rgba(46,196,182,0.5), transparent)",
+          background: "linear-gradient(90deg, transparent, rgba(0,212,255,0.5), transparent)",
           opacity: divOp,
           transform: `scaleX(${divOp})`,
         }} />
@@ -103,7 +103,7 @@ export const HeroComposition: React.FC = () => {
           fontSize: 22,
           color: "rgba(90,143,170,0.9)",
           fontWeight: 300,
-          textShadow: "0 0 8px rgba(46,196,182,0.3)",
+          textShadow: "0 0 8px rgba(0,212,255,0.3)",
           opacity: subOp,
         }}>
           Od experimentů k reálným výsledkům

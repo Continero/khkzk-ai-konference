@@ -17,7 +17,7 @@ interface Participant {
 const emptyParticipant = (): Participant => ({ name: "", position: "", email: "", phone: "" });
 
 const inputClass =
-  "w-full bg-bg-deep/80 border border-accent-cyan/15 rounded px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted/50 focus:outline-none focus:border-accent-cyan/40 focus:shadow-[0_0_8px_rgba(46,196,182,0.1)] transition-all font-mono";
+  "w-full bg-bg-deep/80 border border-accent-cyan/15 rounded px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted/50 focus:outline-none focus:border-accent-cyan/40 focus:shadow-[0_0_8px_rgba(0,212,255,0.1)] transition-all font-mono";
 
 const labelClass = "block text-xs text-text-secondary font-mono tracking-wider uppercase mb-1.5";
 
@@ -220,7 +220,7 @@ export function RegistrationModalProvider({ children }: { children: React.ReactN
                             disabled={submitting}
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
-                            className="w-full sm:w-auto px-8 py-3 rounded font-mono text-base font-bold tracking-wider uppercase bg-accent-cyan text-bg-deep shadow-[0_0_20px_rgba(46,196,182,0.2)] hover:shadow-[0_0_30px_rgba(46,196,182,0.35)] transition-all disabled:opacity-50"
+                            className="w-full sm:w-auto px-8 py-3 rounded font-mono text-base font-bold tracking-wider uppercase bg-accent-cyan text-bg-deep shadow-[0_0_20px_rgba(0,212,255,0.2)] hover:shadow-[0_0_30px_rgba(0,212,255,0.35)] transition-all disabled:opacity-50"
                           >
                             {submitting ? "Odesílám..." : "Odeslat přihlášku"}
                           </motion.button>

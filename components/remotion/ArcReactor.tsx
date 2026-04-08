@@ -34,7 +34,7 @@ function TickRing({ radius, count, length, rotation, opacity }: {
     const x2 = 250 + Math.cos(rad) * (radius + length);
     const y2 = 250 + Math.sin(rad) * (radius + length);
     ticks.push(
-      <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke="rgba(46,196,182,0.3)" strokeWidth={0.5} opacity={opacity} />
+      <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke="rgba(0,212,255,0.3)" strokeWidth={0.5} opacity={opacity} />
     );
   }
   return <>{ticks}</>;
@@ -76,9 +76,9 @@ export const ArcReactor: React.FC = () => {
         {/* Outer glow */}
         <defs>
           <radialGradient id="coreGlow">
-            <stop offset="0%" stopColor="rgba(46,196,182,0.4)" />
-            <stop offset="50%" stopColor="rgba(46,196,182,0.1)" />
-            <stop offset="100%" stopColor="rgba(46,196,182,0)" />
+            <stop offset="0%" stopColor="rgba(0,212,255,0.4)" />
+            <stop offset="50%" stopColor="rgba(0,212,255,0.1)" />
+            <stop offset="100%" stopColor="rgba(0,212,255,0)" />
           </radialGradient>
           <filter id="blur">
             <feGaussianBlur stdDeviation="3" />
@@ -94,7 +94,7 @@ export const ArcReactor: React.FC = () => {
         {/* Outer ring */}
         <circle
           cx="250" cy="250" r={220 * outerRingScale}
-          fill="none" stroke="rgba(46,196,182,0.08)" strokeWidth={1}
+          fill="none" stroke="rgba(0,212,255,0.08)" strokeWidth={1}
           opacity={outerRingScale}
         />
 
@@ -118,7 +118,7 @@ export const ArcReactor: React.FC = () => {
               key={idx}
               d={`M ${x1} ${y1} A ${arcR} ${arcR} 0 0 1 ${x2} ${y2}`}
               fill="none"
-              stroke="rgba(46,196,182,0.25)"
+              stroke="rgba(0,212,255,0.25)"
               strokeWidth={2}
               opacity={dataArcProgress}
             />
@@ -132,13 +132,13 @@ export const ArcReactor: React.FC = () => {
           strokeWidth={1}
           rotation={midRingRotation}
           opacity={midRingScale * 0.5}
-          color="rgba(46,196,182,0.3)"
+          color="rgba(0,212,255,0.3)"
         />
 
         {/* Middle solid ring */}
         <circle
           cx="250" cy="250" r={140 * midRingScale}
-          fill="none" stroke="rgba(46,196,182,0.12)" strokeWidth={0.5}
+          fill="none" stroke="rgba(0,212,255,0.12)" strokeWidth={0.5}
           opacity={midRingScale}
         />
 
@@ -149,13 +149,13 @@ export const ArcReactor: React.FC = () => {
           strokeWidth={1.5}
           rotation={innerRingRotation}
           opacity={innerRingScale * 0.6}
-          color="rgba(46,196,182,0.4)"
+          color="rgba(0,212,255,0.4)"
         />
 
         {/* Inner ring */}
         <circle
           cx="250" cy="250" r={80 * innerRingScale}
-          fill="none" stroke="rgba(46,196,182,0.15)" strokeWidth={1}
+          fill="none" stroke="rgba(0,212,255,0.15)" strokeWidth={1}
           opacity={innerRingScale}
         />
 
@@ -165,8 +165,8 @@ export const ArcReactor: React.FC = () => {
         {/* Core circle */}
         <circle
           cx="250" cy="250" r={30 * coreScale * pulse}
-          fill="rgba(46,196,182,0.05)"
-          stroke="rgba(46,196,182,0.5)"
+          fill="rgba(0,212,255,0.05)"
+          stroke="rgba(0,212,255,0.5)"
           strokeWidth={1.5}
           filter="url(#blur)"
           opacity={coreScale}
@@ -175,7 +175,7 @@ export const ArcReactor: React.FC = () => {
         {/* Core bright dot */}
         <circle
           cx="250" cy="250" r={8 * coreScale * pulse}
-          fill="rgba(46,196,182,0.8)"
+          fill="rgba(0,212,255,0.8)"
           filter="url(#glow)"
           opacity={coreScale * coreGlow}
         />
