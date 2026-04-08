@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1920">
+<title>AI v praxi 2026 — Pozvanka</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #e8f4ff;
+    background: #060a14;
+  }
+
+  .canvas {
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+    background:
+      linear-gradient(135deg, #060a14 0%, #081020 40%, #0a1428 70%, #071218 100%);
+    overflow: hidden;
+  }
+
+  /* Subtle grid */
+  .canvas::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(0, 212, 255, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 212, 255, 0.025) 1px, transparent 1px);
+    background-size: 80px 80px;
+    pointer-events: none;
+  }
+
+  /* Teal glow top-right */
+  .glow-tr {
+    position: absolute;
+    top: -200px;
+    right: -100px;
+    width: 800px;
+    height: 600px;
+    background: radial-gradient(ellipse, rgba(0, 180, 200, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  /* Teal glow bottom-left */
+  .glow-bl {
+    position: absolute;
+    bottom: -150px;
+    left: -100px;
+    width: 700px;
+    height: 500px;
+    background: radial-gradient(ellipse, rgba(0, 212, 255, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  /* Corner brackets */
+  .corner { position: absolute; width: 40px; height: 40px; pointer-events: none; }
+  .corner-tl { top: 30px; left: 30px; border-top: 2px solid rgba(0,212,255,0.3); border-left: 2px solid rgba(0,212,255,0.3); }
+  .corner-tr { top: 30px; right: 30px; border-top: 2px solid rgba(0,212,255,0.3); border-right: 2px solid rgba(0,212,255,0.3); }
+  .corner-bl { bottom: 30px; left: 30px; border-bottom: 2px solid rgba(0,212,255,0.3); border-left: 2px solid rgba(0,212,255,0.3); }
+  .corner-br { bottom: 30px; right: 30px; border-bottom: 2px solid rgba(0,212,255,0.3); border-right: 2px solid rgba(0,212,255,0.3); }
+
+  .content {
+    position: relative;
+    z-index: 10;
+    padding: 60px 80px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* Top bar */
+  .top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo-area {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .logo-area img {
+    height: 70px;
+    filter: brightness(0) invert(1) opacity(0.85);
+  }
+
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .logo-text .org {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: rgba(0, 212, 255, 0.5);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .logo-text .event {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+
+  .logo-text .event span {
+    color: #00d4ff;
+  }
+
+  .date-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    color: #00d4ff;
+    padding: 8px 20px;
+    border: 1px solid rgba(0, 212, 255, 0.25);
+    letter-spacing: 0.15em;
+  }
+
+  /* Main content area */
+  .main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    padding: 20px 0;
+  }
+
+  .headline {
+    max-width: 1100px;
+  }
+
+  .headline .sub {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: rgba(0, 212, 255, 0.5);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .headline h1 {
+    font-size: 92px;
+    font-weight: 900;
+    line-height: 0.95;
+    text-shadow: 0 0 20px rgba(0, 212, 255, 0.3), 0 0 60px rgba(0, 212, 255, 0.08);
+    margin-bottom: 8px;
+  }
+
+  .headline h1 .ai {
+    color: #00d4ff;
+  }
+
+  .headline h1 .year {
+    color: rgba(90, 143, 170, 0.7);
+    display: block;
+    font-size: 80px;
+  }
+
+  .headline .tagline {
+    font-size: 26px;
+    color: #8bb8d0;
+    font-weight: 400;
+    margin-top: 16px;
+  }
+
+  /* Info columns */
+  .info-row {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+  }
+
+  /* Topics */
+  .topics {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .topics .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 700;
+    color: #00d4ff;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .topic-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #d4efff;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .topic-item .arrow {
+    color: #00d4ff;
+    font-size: 16px;
+  }
+
+  /* Details */
+  .details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+  }
+
+  .detail-row {
+    display: flex;
+    gap: 12px;
+  }
+
+  .detail-row .key {
+    color: rgba(0, 212, 255, 0.6);
+    min-width: 110px;
+  }
+
+  .detail-row .val {
+    color: #e8f4ff;
+    font-weight: 600;
+  }
+
+  /* Highlights strip */
+  .highlights {
+    display: flex;
+    gap: 30px;
+  }
+
+  .highlight-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 18px;
+    background: rgba(0, 212, 255, 0.05);
+    border: 1px solid rgba(0, 212, 255, 0.12);
+    border-radius: 6px;
+  }
+
+  .highlight-item .icon {
+    color: #00d4ff;
+    font-size: 14px;
+  }
+
+  .highlight-item .text {
+    font-size: 14px;
+    font-weight: 600;
+    color: #d4efff;
+  }
+
+  .highlight-item .sub-text {
+    font-size: 11px;
+    color: #8bb8d0;
+  }
+
+  /* Bottom bar */
+  .bottom-bar {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  .cta-area {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 20px;
+    font-weight: 700;
+    color: #060a14;
+    background: #00d4ff;
+    padding: 14px 40px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    text-decoration: none;
+    box-shadow: 0 0 30px rgba(0, 212, 255, 0.3), 0 0 60px rgba(0, 212, 255, 0.1);
+  }
+
+  .cta-url {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    color: rgba(0, 212, 255, 0.5);
+    letter-spacing: 0.05em;
+  }
+
+  .bottom-right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .pricing {
+    text-align: right;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .pricing .from {
+    font-size: 12px;
+    color: #8bb8d0;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .pricing .price {
+    font-size: 32px;
+    font-weight: 800;
+    color: #ff9f1c;
+    text-shadow: 0 0 15px rgba(255, 159, 28, 0.3);
+  }
+
+  .pricing .note {
+    font-size: 11px;
+    color: rgba(139, 184, 208, 0.6);
+  }
+
+  /* Divider line */
+  .v-divider {
+    width: 1px;
+    height: 60px;
+    background: rgba(0, 212, 255, 0.15);
+  }
+
+  .partner-logos {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .partner-logos span {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: rgba(0, 212, 255, 0.35);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .partner-badge {
+    padding: 6px 14px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="glow-tr"></div>
+  <div class="glow-bl"></div>
+  <div class="corner corner-tl"></div>
+  <div class="corner corner-tr"></div>
+  <div class="corner corner-bl"></div>
+  <div class="corner corner-br"></div>
+
+  <div class="content">
+    <!-- Top bar -->
+    <div class="top-bar">
+      <div class="logo-area">
+        <img src="/khkzk-logo.svg" alt="KHKZK">
+        <div class="logo-text">
+          <span class="org">Krajská hospodářská komora</span>
+          <span class="event">AI v praxi <span>2026</span></span>
+        </div>
+      </div>
+      <div class="date-badge">20. KVĚTNA 2026 // INTERHOTEL ZLÍN</div>
+    </div>
+
+    <!-- Main -->
+    <div class="main">
+      <div class="headline">
+        <p class="sub">&#9658; Konference pro firmy Zlínského kraje</p>
+        <h1><span class="ai">AI</span> v praxi<span class="year">2026</span></h1>
+        <p class="tagline">Od experimentů k reálným výsledkům</p>
+      </div>
+
+      <div class="info-row">
+        <div class="topics">
+          <div class="label">&#9658; Témata</div>
+          <div class="topic-item"><span class="arrow">&#9658;</span> Strategie a adopce AI</div>
+          <div class="topic-item"><span class="arrow">&#9658;</span> Nástroje pro každý den</div>
+          <div class="topic-item"><span class="arrow">&#9658;</span> Průmysl a budoucnost</div>
+        </div>
+
+        <div class="details">
+          <div class="detail-row"><span class="key">[ DATUM ]:</span><span class="val">20. 5. 2026</span></div>
+          <div class="detail-row"><span class="key">[ CAS ]:</span><span class="val">9:00 - 15:00</span></div>
+          <div class="detail-row"><span class="key">[ LOKACE ]:</span><span class="val">Interhotel Zlín</span></div>
+          <div class="detail-row"><span class="key">[ FORMAT ]:</span><span class="val">Case Studies + Live Demo + Networking</span></div>
+        </div>
+      </div>
+
+      <div class="highlights">
+        <div class="highlight-item">
+          <span class="icon">&#9658;</span>
+          <div><div class="text">6+ přednášek</div><div class="sub-text">od praktiků, ne teoretiků</div></div>
+        </div>
+        <div class="highlight-item">
+          <span class="icon">&#9658;</span>
+          <div><div class="text">Humanoidní robot naživo</div><div class="sub-text">BOTT-E, FANUC, AI demo zóna</div></div>
+        </div>
+        <div class="highlight-item">
+          <span class="icon">&#9658;</span>
+          <div><div class="text">Oběd a káva v ceně</div><div class="sub-text">celodenní networking</div></div>
+        </div>
+        <div class="highlight-item">
+          <span class="icon">&#9658;</span>
+          <div><div class="text">118 firem v průzkumu</div><div class="sub-text">program na základě dat</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="bottom-bar">
+      <div class="cta-area">
+        <div class="cta-button">Registrujte se na aivpraxi.khkzk.cz</div>
+        <span class="cta-url">Early Bird do 23. 4. 2026 // Počet míst omezen</span>
+      </div>
+
+      <div class="bottom-right">
+        <div class="pricing">
+          <div class="from">Early Bird od</div>
+          <div class="price">2 390 Kč</div>
+          <div class="note">pro členy KHKZK</div>
+        </div>
+        <div class="v-divider"></div>
+        <div class="partner-logos">
+          <span>Partneři:</span>
+          <span class="partner-badge">Generali</span>
+          <span class="partner-badge">eD / Microsoft</span>
+          <span class="partner-badge">Aricoma</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
