@@ -6,7 +6,6 @@ const partners: { name: string; logo: string | null; tier: "hlavni" | "partner" 
   { name: "Zlínský kraj", logo: "/logo_partneri/zlinskykraj.jpg", tier: "hlavni" },
   { name: "Generali", logo: "/logo_partneri/generali.png", tier: "hlavni" },
   { name: "eD system a.s.", logo: null, tier: "hlavni" },
-  { name: "Microsoft", logo: null, tier: "hlavni" },
   { name: "Aricoma", logo: "/logo_partneri/aricoma.png", tier: "partner" },
   { name: "Petrás Režek", logo: "/logo_partneri/petrasrezek.png", tier: "partner" },
 ];
@@ -20,7 +19,7 @@ export function Partners() {
             ▸ Allied_Systems
           </p>
           <h2 className="text-2xl sm:text-3xl font-bold mb-10 text-center text-text-secondary holo-glow">
-            Partneři konference
+            Hlavní partneři
           </h2>
         </ScrollReveal>
 
