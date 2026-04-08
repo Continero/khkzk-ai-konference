@@ -1,5 +1,6 @@
 import { JarvisBackground } from "@/components/JarvisBackground";
 import { Navigation } from "@/components/Navigation";
+import { RegistrationModalProvider } from "@/components/RegistrationModal";
 import { Hero } from "@/components/sections/Hero";
 import { Countdown } from "@/components/sections/Countdown";
 import { About } from "@/components/sections/About";
@@ -17,25 +18,27 @@ import { Footer } from "@/components/sections/Footer";
 
 export default function Home() {
   return (
-    <main className="relative">
-      <JarvisBackground />
-      <Navigation />
-      <div className="relative z-10">
-        <Hero />
-        <Countdown />
-        <About />
-        <Gallery />
-        <RobotAnalysis />
-        <Topics />
-        <Speakers />
-        <Testimonials />
-        <Program />
-        <Venue />
-        <Registration />
-        <Partners />
-        <Exhibitors />
-        <Footer />
-      </div>
-    </main>
+    <RegistrationModalProvider>
+      <main className="relative">
+        <JarvisBackground />
+        <Navigation />
+        <div className="relative z-10">
+          <Hero />
+          <Countdown />
+          <About />
+          <Gallery />
+          <RobotAnalysis />
+          <Topics />
+          <Speakers />
+          <Testimonials />
+          <Program />
+          <Venue />
+          <Registration />
+          <Partners />
+          <Exhibitors />
+          <Footer />
+        </div>
+      </main>
+    </RegistrationModalProvider>
   );
 }
