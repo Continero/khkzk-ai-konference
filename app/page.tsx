@@ -26,11 +26,10 @@ export default function Home() {
           <Hero />
           <Countdown />
           <About />
-          <Gallery />
-          <RobotAnalysis />
           <Topics />
+          <Gallery />
           <Speakers />
-
+          <RobotAnalysis />
           <Program />
           <Venue />
           <Registration />
