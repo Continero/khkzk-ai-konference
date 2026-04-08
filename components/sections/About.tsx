@@ -6,10 +6,10 @@ import { DataReadout } from "@/components/remotion/DataReadout";
 import { SectionActivation } from "@/components/remotion/SectionActivation";
 
 const stats = [
-  { value: "100+", label: "ÚČASTNÍKŮ_2025", gauge: 0.85 },
+  { value: "100+", label: "ÚČASTNÍKŮ", gauge: 0.85 },
   { value: "6+", label: "PŘEDNÁŠEK", gauge: 0.6 },
-  { value: "1", label: "DEN_PLNÝ_AI", gauge: 1.0 },
-  { value: "20", label: "KVĚTEN_2026", gauge: 0.42 },
+  { value: "1", label: "DEN PLNÝ AI", gauge: 1.0 },
+  { value: "20.5.", label: "KVĚTEN 2026", gauge: 0.42 },
 ];
 
 const modules = [

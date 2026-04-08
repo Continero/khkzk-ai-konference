@@ -104,10 +104,7 @@ export const DataReadout: React.FC<{
           letterSpacing: "0.12em",
           marginTop: 6,
           textTransform: "uppercase",
-          maxWidth: 100,
-          overflow: "hidden",
-          textOverflow: "ellipsis",
-          whiteSpace: "nowrap",
+          maxWidth: 120,
         }}>
           {label}
         </div>
