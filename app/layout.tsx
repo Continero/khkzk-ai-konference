@@ -190,7 +190,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-screen font-sans scan-lines">
+      <body className="min-h-screen font-sans">
         {children}
       </body>
     </html>

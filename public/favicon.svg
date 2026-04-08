@@ -1,4 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="4" fill="#080e1a"/>
-  <text x="16" y="22" text-anchor="middle" font-family="monospace" font-weight="800" font-size="16" fill="#00d4ff">AI</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1428"/>
+      <stop offset="100%" stop-color="#060a14"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00d4ff"/>
+      <stop offset="100%" stop-color="#0088cc"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <!-- Corner brackets (HUD style) -->
+  <path d="M8 18V10a2 2 0 012-2h8" fill="none" stroke="#00d4ff" stroke-width="1.5" opacity="0.4"/>
+  <path d="M46 8h8a2 2 0 012 2v8" fill="none" stroke="#00d4ff" stroke-width="1.5" opacity="0.4"/>
+  <path d="M56 46v8a2 2 0 01-2 2h-8" fill="none" stroke="#00d4ff" stroke-width="1.5" opacity="0.4"/>
+  <path d="M18 56h-8a2 2 0 01-2-2v-8" fill="none" stroke="#00d4ff" stroke-width="1.5" opacity="0.4"/>
+  <!-- Arc reactor dot -->
+  <circle cx="32" cy="15" r="2.5" fill="#00d4ff" opacity="0.6"/>
+  <circle cx="32" cy="15" r="5" fill="none" stroke="#00d4ff" stroke-width="0.7" opacity="0.25"/>
+  <!-- AI text -->
+  <text x="32" y="46" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-weight="800" font-size="30" fill="url(#glow)" letter-spacing="-1">AI</text>
 </svg>
