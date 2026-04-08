@@ -213,6 +213,15 @@ export const RobotSchematic: React.FC = () => {
   const statusOp = spring({ frame: Math.max(0, frame - 80), fps, config: { damping: 20, stiffness: 60 }, from: 0, to: 1 });
   const pulse = frame > 75 ? Math.sin(frame * 0.04) * 0.08 + 0.92 : 1;
 
+  // Idle animations (continuous after assembly ~frame 90)
+  const idle = frame > 90;
+  const breathe = idle ? Math.sin(frame * 0.025) * 2 : 0;
+  const scanY = idle ? 80 + ((frame * 1.5) % 400) : -10;
+  const scanOp = idle ? 0.15 + Math.sin(frame * 0.08) * 0.08 : 0;
+  const arcPulseR = idle ? 18 + Math.sin(frame * 0.06) * 6 : interpolate(frame, [20, 30], [0, 18], { extrapolateRight: "clamp" });
+  const arcPulseOp = idle ? 0.15 + Math.sin(frame * 0.06) * 0.1 : 0.2;
+  const diagFlicker = (i: number) => idle ? 0.7 + Math.sin(frame * 0.05 + i * 1.5) * 0.3 : 1;
+
   return (
     <AbsoluteFill style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
       <svg width="800" height="520" viewBox="200 40 440 440">
@@ -239,7 +248,7 @@ export const RobotSchematic: React.FC = () => {
           const op = interpolate(localFrame, [0, 8], [0, 1], { extrapolateRight: "clamp" });
 
           return (
-            <g key={i} opacity={op * pulse} transform={`translate(${tx}, ${ty})`}>
+            <g key={i} opacity={op * pulse} transform={`translate(${tx}, ${ty + (arrival > 0.99 ? breathe * (i < 6 ? 0.3 : i < 12 ? 0.15 : 0) : 0)})`}>
               {/* Glow */}
               <path d={part.d} fill="none" stroke="rgba(0,212,255,0.12)" strokeWidth={4} filter="url(#partGlow)" />
               {/* Main */}
@@ -250,9 +259,22 @@ export const RobotSchematic: React.FC = () => {
 
         {/* Arc reactor glow pulse */}
         {frame > 20 && (
-          <circle cx="420" cy="190" r={interpolate(frame, [20, 30], [0, 18], { extrapolateRight: "clamp" })}
-            fill="none" stroke="rgba(0,212,255,0.2)" strokeWidth={1}
-            opacity={pulse} filter="url(#softGlow)" />
+          <>
+            <circle cx="420" cy="190" r={arcPulseR}
+              fill="none" stroke="rgba(0,212,255,0.2)" strokeWidth={1}
+              opacity={arcPulseOp * pulse} filter="url(#softGlow)" />
+            {idle && (
+              <circle cx="420" cy="190" r={arcPulseR * 1.5}
+                fill="none" stroke="rgba(0,212,255,0.08)" strokeWidth={0.5}
+                opacity={arcPulseOp * 0.5} filter="url(#softGlow)" />
+            )}
+          </>
+        )}
+
+        {/* Scanning line — continuous horizontal sweep */}
+        {idle && (
+          <line x1="300" y1={scanY} x2="540" y2={scanY}
+            stroke="rgba(0,212,255,0.12)" strokeWidth={1} opacity={scanOp} />
         )}
 
         {/* Diagnostic readouts */}
@@ -262,7 +284,7 @@ export const RobotSchematic: React.FC = () => {
           const isLeft = diag.x < 400;
 
           return (
-            <g key={`d${i}`} opacity={diagOp}>
+            <g key={`d${i}`} opacity={diagOp * diagFlicker(i)}>
               <text x={diag.x} y={diag.y} fontFamily="monospace" fontSize="7" fill="rgba(0,212,255,0.3)" letterSpacing="1" textAnchor={isLeft ? "end" : "start"}>
                 {diag.label}
               </text>

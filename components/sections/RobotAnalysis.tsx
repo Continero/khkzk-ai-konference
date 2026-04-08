@@ -25,9 +25,10 @@ export function RobotAnalysis() {
           <RemotionInView
             component={RobotSchematic}
             inputProps={{}}
-            durationInFrames={150}
+            durationInFrames={600}
             width={800}
             height={500}
+            loop
             style={{ width: "100%", height: "100%" }}
           />
           {/* Subtle vignette edges */}
