@@ -49,7 +49,7 @@ export function Footer() {
             &copy; 2026 {conferenceInfo.organizer} // All systems nominal
           </p>
           <p className="font-mono text-xs text-text-muted/40">
-            Web: Continero Corp
+            Web: <a href="https://www.continero.com" target="_blank" rel="noopener noreferrer" className="text-accent-cyan/40 hover:text-accent-cyan transition-colors">Continero</a>
           </p>
         </div>
       </div>

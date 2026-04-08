@@ -72,7 +72,7 @@ export function Speakers() {
 
         <ScrollReveal delay={0.4}>
           <p className="text-center font-mono text-sm text-text-muted mt-10">
-            // Další personnel budou postupně deklasifikováni
+            // Další řečníci budou postupně oznámeni
           </p>
         </ScrollReveal>
       </div>
