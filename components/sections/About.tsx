@@ -35,7 +35,7 @@ export function About() {
         <div className="h-[200px] mb-6">
           <RemotionInView
             component={SectionActivation}
-            inputProps={{ sectionId: "01 // System_Intel", title: "AI opravdu používat", subtitle: "Konference pro ty, kdo chtějí vědět jak na to" }}
+            inputProps={{ sectionId: "01 // System_Intel", title: "AI v praxi — ne v teorii", subtitle: "Konference pro ty, kteří chtějí vědět jak na to" }}
             durationInFrames={90}
             width={800}
             height={200}
