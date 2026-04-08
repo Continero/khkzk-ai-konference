@@ -338,7 +338,7 @@ export const conferenceInfo = {
     "Hlavní konferenční sál pro 200 osob",
     "Demo zóna s roboty a AI nástroji",
     "Networking lounge s kávou po celý den",
-    "Bufetový oběd v ceně vstupenky",
+    "Oběd v ceně vstupenky",
     "Parkování zdarma u hotelu",
     "5 minut pěšky od centra Zlína",
   ],
