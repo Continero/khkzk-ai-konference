@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=1920">
-<title>AI v praxi 2026 — Pozvanka</title>
+<title>AI v praxi 2026 — Pozvánka</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
 
@@ -71,7 +71,7 @@
   .content {
     position: relative;
     z-index: 10;
-    padding: 60px 80px;
+    padding: 50px 70px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -104,14 +104,14 @@
 
   .logo-text .org {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
+    font-size: 14px;
     color: rgba(0, 212, 255, 0.5);
     letter-spacing: 0.2em;
     text-transform: uppercase;
   }
 
   .logo-text .event {
-    font-size: 18px;
+    font-size: 22px;
     font-weight: 700;
     letter-spacing: 0.05em;
   }
@@ -122,108 +122,110 @@
 
   .date-badge {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 14px;
+    font-size: 18px;
     color: #00d4ff;
     padding: 8px 20px;
     border: 1px solid rgba(0, 212, 255, 0.25);
     letter-spacing: 0.15em;
   }
 
-  /* Main content area */
+  /* Two-column layout */
   .main {
     flex: 1;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 40px;
+    gap: 60px;
     padding: 20px 0;
+    align-items: center;
   }
 
-  .headline {
-    max-width: 1100px;
+  .left-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .right-col {
+    width: 620px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
 
   .headline .sub {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 13px;
+    font-size: 16px;
     color: rgba(0, 212, 255, 0.5);
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
 
   .headline h1 {
-    font-size: 92px;
+    font-size: 96px;
     font-weight: 900;
     line-height: 0.95;
     text-shadow: 0 0 20px rgba(0, 212, 255, 0.3), 0 0 60px rgba(0, 212, 255, 0.08);
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
-  .headline h1 .ai {
-    color: #00d4ff;
-  }
-
+  .headline h1 .ai { color: #00d4ff; }
   .headline h1 .year {
     color: rgba(90, 143, 170, 0.7);
     display: block;
-    font-size: 80px;
+    font-size: 84px;
   }
 
   .headline .tagline {
-    font-size: 26px;
+    font-size: 28px;
     color: #8bb8d0;
     font-weight: 400;
-    margin-top: 16px;
+    margin-top: 12px;
   }
 
-  /* Info columns */
+  /* Info row — topics + details side by side */
   .info-row {
     display: flex;
     gap: 50px;
     align-items: flex-start;
   }
 
-  /* Topics */
   .topics {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
+    min-width: 320px;
   }
 
   .topics .label {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 700;
     color: #00d4ff;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
   }
 
   .topic-item {
     display: flex;
     align-items: center;
     gap: 12px;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 600;
     color: #d4efff;
     text-transform: uppercase;
     letter-spacing: 0.04em;
   }
 
-  .topic-item .arrow {
-    color: #00d4ff;
-    font-size: 16px;
-  }
+  .topic-item .arrow { color: #00d4ff; font-size: 18px; }
 
-  /* Details */
   .details {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
     font-family: 'JetBrains Mono', monospace;
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .detail-row {
@@ -233,7 +235,8 @@
 
   .detail-row .key {
     color: rgba(0, 212, 255, 0.6);
-    min-width: 110px;
+    min-width: 150px;
+    text-align: right;
   }
 
   .detail-row .val {
@@ -244,33 +247,114 @@
   /* Highlights strip */
   .highlights {
     display: flex;
-    gap: 30px;
+    gap: 16px;
+    flex-wrap: wrap;
   }
 
   .highlight-item {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 10px 18px;
+    padding: 12px 18px;
     background: rgba(0, 212, 255, 0.05);
     border: 1px solid rgba(0, 212, 255, 0.12);
     border-radius: 6px;
   }
 
-  .highlight-item .icon {
-    color: #00d4ff;
-    font-size: 14px;
-  }
+  .highlight-item .icon { color: #00d4ff; font-size: 16px; }
 
   .highlight-item .text {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 600;
     color: #d4efff;
   }
 
   .highlight-item .sub-text {
-    font-size: 11px;
+    font-size: 14px;
     color: #8bb8d0;
+  }
+
+  /* Right column — photo grid */
+  .photo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 8px;
+    height: 600px;
+    border: 1px solid rgba(0, 212, 255, 0.15);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .photo-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.75;
+    filter: contrast(1.1) brightness(0.9);
+  }
+
+  .photo-grid .big {
+    grid-row: 1 / 3;
+  }
+
+  .photo-grid::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(180deg, rgba(6, 10, 20, 0.3) 0%, transparent 30%, transparent 70%, rgba(6, 10, 20, 0.5) 100%),
+      linear-gradient(90deg, rgba(6, 10, 20, 0.2) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .photo-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    color: rgba(0, 212, 255, 0.4);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  /* Speakers preview */
+  .speakers-row {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+  }
+
+  .speaker-chip {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 12px 6px 6px;
+    background: rgba(0, 212, 255, 0.05);
+    border: 1px solid rgba(0, 212, 255, 0.1);
+    border-radius: 40px;
+  }
+
+  .speaker-chip img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+  }
+
+  .speaker-chip .name {
+    font-size: 12px;
+    font-weight: 600;
+    color: #d4efff;
+    line-height: 1.2;
+  }
+
+  .speaker-chip .role {
+    font-size: 10px;
+    color: #8bb8d0;
+    font-family: 'JetBrains Mono', monospace;
   }
 
   /* Bottom bar */
@@ -283,7 +367,7 @@
   .cta-area {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
   }
 
   .cta-button {
@@ -304,14 +388,14 @@
 
   .cta-url {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 14px;
+    font-size: 16px;
     color: rgba(0, 212, 255, 0.5);
     letter-spacing: 0.05em;
   }
 
   .bottom-right {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     gap: 24px;
   }
 
@@ -321,52 +405,64 @@
   }
 
   .pricing .from {
-    font-size: 12px;
+    font-size: 15px;
     color: #8bb8d0;
     letter-spacing: 0.1em;
     text-transform: uppercase;
   }
 
   .pricing .price {
-    font-size: 32px;
+    font-size: 34px;
     font-weight: 800;
     color: #ff9f1c;
     text-shadow: 0 0 15px rgba(255, 159, 28, 0.3);
   }
 
   .pricing .note {
-    font-size: 11px;
+    font-size: 14px;
     color: rgba(139, 184, 208, 0.6);
   }
 
-  /* Divider line */
   .v-divider {
     width: 1px;
-    height: 60px;
+    height: 55px;
     background: rgba(0, 212, 255, 0.15);
   }
 
   .partner-logos {
     display: flex;
-    align-items: center;
-    gap: 16px;
+    flex-direction: column;
+    gap: 6px;
   }
 
-  .partner-logos span {
+  .partner-logos .partner-label {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
+    font-size: 13px;
     color: rgba(0, 212, 255, 0.35);
     letter-spacing: 0.15em;
     text-transform: uppercase;
   }
 
-  .partner-badge {
-    padding: 6px 14px;
-    background: rgba(255, 255, 255, 0.9);
+  .partner-logos .logos-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .partner-logo-box {
+    background: rgba(255, 255, 255, 0.92);
     border-radius: 4px;
-    font-size: 12px;
-    font-weight: 700;
-    color: #1a1a1a;
+    padding: 6px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+  }
+
+  .partner-logo-box img {
+    height: 30px;
+    max-width: 120px;
+    object-fit: contain;
   }
 </style>
 </head>
@@ -383,7 +479,7 @@
     <!-- Top bar -->
     <div class="top-bar">
       <div class="logo-area">
-        <img src="/khkzk-logo.svg" alt="KHKZK">
+        <img src="khkzk-logo.svg" alt="KHKZK">
         <div class="logo-text">
           <span class="org">Krajská hospodářská komora</span>
           <span class="event">AI v praxi <span>2026</span></span>
@@ -392,47 +488,60 @@
       <div class="date-badge">20. KVĚTNA 2026 // INTERHOTEL ZLÍN</div>
     </div>
 
-    <!-- Main -->
+    <!-- Main two-column -->
     <div class="main">
-      <div class="headline">
-        <p class="sub">&#9658; Konference pro firmy Zlínského kraje</p>
-        <h1><span class="ai">AI</span> v praxi<span class="year">2026</span></h1>
-        <p class="tagline">Od experimentů k reálným výsledkům</p>
+      <div class="left-col">
+        <div class="headline">
+          <p class="sub">&#9658; Konference pro firmy Zlínského kraje</p>
+          <h1><span class="ai">AI</span> v praxi<span class="year">2026</span></h1>
+          <p class="tagline">Od experimentů k reálným výsledkům</p>
+        </div>
+
+        <div class="info-row">
+          <div class="topics">
+            <div class="label">&#9658; Témata</div>
+            <div class="topic-item"><span class="arrow">&#9658;</span> Strategie a adopce AI</div>
+            <div class="topic-item"><span class="arrow">&#9658;</span> Nástroje pro každý den</div>
+            <div class="topic-item"><span class="arrow">&#9658;</span> Průmysl a budoucnost</div>
+          </div>
+
+          <div class="details">
+            <div class="detail-row"><span class="key">[ DATUM ]:</span><span class="val">20. 5. 2026</span></div>
+            <div class="detail-row"><span class="key">[ ČAS ]:</span><span class="val">9:00 – 15:00</span></div>
+            <div class="detail-row"><span class="key">[ LOKACE ]:</span><span class="val">Interhotel Zlín</span></div>
+            <div class="detail-row"><span class="key">[ FORMÁT ]:</span><span class="val">Case Studies + Live Demo</span></div>
+          </div>
+        </div>
+
+        <div class="highlights">
+          <div class="highlight-item">
+            <span class="icon">&#9658;</span>
+            <div><div class="text">6+ přednášek</div><div class="sub-text">od praktiků, ne teoretiků</div></div>
+          </div>
+          <div class="highlight-item">
+            <span class="icon">&#9658;</span>
+            <div><div class="text">Humanoidní robot naživo</div><div class="sub-text">BOTT-E, FANUC, AI demo zóna</div></div>
+          </div>
+          <div class="highlight-item">
+            <span class="icon">&#9658;</span>
+            <div><div class="text">Oběd a káva v ceně</div><div class="sub-text">celodenní networking</div></div>
+          </div>
+          <div class="highlight-item">
+            <span class="icon">&#9658;</span>
+            <div><div class="text">118 firem v průzkumu</div><div class="sub-text">program na základě dat</div></div>
+          </div>
+        </div>
       </div>
 
-      <div class="info-row">
-        <div class="topics">
-          <div class="label">&#9658; Témata</div>
-          <div class="topic-item"><span class="arrow">&#9658;</span> Strategie a adopce AI</div>
-          <div class="topic-item"><span class="arrow">&#9658;</span> Nástroje pro každý den</div>
-          <div class="topic-item"><span class="arrow">&#9658;</span> Průmysl a budoucnost</div>
+      <!-- Right column — photos + speakers -->
+      <div class="right-col">
+        <div class="photo-grid">
+          <img src="photos/JS1_6798.jpg" alt="Přestávka s kávou na AI konferenci">
+          <img src="photos/JS1_6789.jpg" alt="Networking a výměna kontaktů">
+          <img src="photos/JS1_6742.jpg" alt="Zlínská AI konference — hlavní sál">
+          <img src="photos/JS1_6828.jpg" alt="Diskuse o AI strategii pro firmy">
         </div>
-
-        <div class="details">
-          <div class="detail-row"><span class="key">[ DATUM ]:</span><span class="val">20. 5. 2026</span></div>
-          <div class="detail-row"><span class="key">[ CAS ]:</span><span class="val">9:00 - 15:00</span></div>
-          <div class="detail-row"><span class="key">[ LOKACE ]:</span><span class="val">Interhotel Zlín</span></div>
-          <div class="detail-row"><span class="key">[ FORMAT ]:</span><span class="val">Case Studies + Live Demo + Networking</span></div>
-        </div>
-      </div>
-
-      <div class="highlights">
-        <div class="highlight-item">
-          <span class="icon">&#9658;</span>
-          <div><div class="text">6+ přednášek</div><div class="sub-text">od praktiků, ne teoretiků</div></div>
-        </div>
-        <div class="highlight-item">
-          <span class="icon">&#9658;</span>
-          <div><div class="text">Humanoidní robot naživo</div><div class="sub-text">BOTT-E, FANUC, AI demo zóna</div></div>
-        </div>
-        <div class="highlight-item">
-          <span class="icon">&#9658;</span>
-          <div><div class="text">Oběd a káva v ceně</div><div class="sub-text">celodenní networking</div></div>
-        </div>
-        <div class="highlight-item">
-          <span class="icon">&#9658;</span>
-          <div><div class="text">118 firem v průzkumu</div><div class="sub-text">program na základě dat</div></div>
-        </div>
+        <div class="photo-label">// Záběry z AI v praxi 2025</div>
       </div>
     </div>
 
@@ -451,10 +560,14 @@
         </div>
         <div class="v-divider"></div>
         <div class="partner-logos">
-          <span>Partneři:</span>
-          <span class="partner-badge">Generali</span>
-          <span class="partner-badge">eD / Microsoft</span>
-          <span class="partner-badge">Aricoma</span>
+          <span class="partner-label">Partneři:</span>
+          <div class="logos-row">
+            <div class="partner-logo-box"><img src="logo_partneri/generali.png" alt="Generali"></div>
+            <div class="partner-logo-box"><img src="logo_partneri/eD_microsoft.jpg" alt="eD system / Microsoft"></div>
+            <div class="partner-logo-box"><img src="logo_partneri/Aricoma_id27lxQ4YM_2.svg" alt="Aricoma"></div>
+            <div class="partner-logo-box"><img src="logo_partneri/petrasrezek-svetle-pozadi.png" alt="Petrás Režek"></div>
+            <div class="partner-logo-box"><img src="logo_partneri/zlinsky-kraj.svg" alt="Zlínský kraj"></div>
+          </div>
         </div>
       </div>
     </div>
