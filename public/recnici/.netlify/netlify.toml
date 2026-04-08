@@ -1,0 +1,33 @@
+headers = []
+redirects = []
+
+[functions]
+
+[functions."*"]
+
+[[plugins]]
+origin = "default"
+package = "@netlify/plugin-nextjs"
+
+[plugins.inputs]
+
+[build]
+publish = "/Users/fogl/Documents/PROJECTS/_COWORK/projects/khkzk-ai-konference/web-v4/public/recnici/.next"
+publishOrigin = "ui"
+commandOrigin = "ui"
+base = "/Users/fogl/Documents/PROJECTS/_COWORK/projects/khkzk-ai-konference/web-v4/public/recnici"
+command = "npm run build"
+
+[build.environment]
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]

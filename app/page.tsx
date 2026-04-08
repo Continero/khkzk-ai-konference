@@ -1,0 +1,41 @@
+import { JarvisBackground } from "@/components/JarvisBackground";
+import { Navigation } from "@/components/Navigation";
+import { Hero } from "@/components/sections/Hero";
+import { Countdown } from "@/components/sections/Countdown";
+import { About } from "@/components/sections/About";
+import { Gallery } from "@/components/sections/Gallery";
+import { RobotAnalysis } from "@/components/sections/RobotAnalysis";
+import { Topics } from "@/components/sections/Topics";
+import { Speakers } from "@/components/sections/Speakers";
+import { Testimonials } from "@/components/sections/Testimonials";
+import { Program } from "@/components/sections/Program";
+import { Venue } from "@/components/sections/Venue";
+import { Registration } from "@/components/sections/Registration";
+import { Partners } from "@/components/sections/Partners";
+import { Exhibitors } from "@/components/sections/Exhibitors";
+import { Footer } from "@/components/sections/Footer";
+
+export default function Home() {
+  return (
+    <main className="relative">
+      <JarvisBackground />
+      <Navigation />
+      <div className="relative z-10">
+        <Hero />
+        <Countdown />
+        <About />
+        <Gallery />
+        <RobotAnalysis />
+        <Topics />
+        <Speakers />
+        <Testimonials />
+        <Program />
+        <Venue />
+        <Registration />
+        <Partners />
+        <Exhibitors />
+        <Footer />
+      </div>
+    </main>
+  );
+}

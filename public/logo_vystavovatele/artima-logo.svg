@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Vrstva_1" data-name="Vrstva 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 214.21 50.32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Nepojmenovaný_přechod_5);
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11 {
+        stroke-width: 0px;
+      }
+
+      .cls-12 {
+        clip-path: url(#clippath-11);
+      }
+
+      .cls-2 {
+        fill: url(#Nepojmenovaný_přechod_9);
+      }
+
+      .cls-13 {
+        clip-path: url(#clippath-2);
+      }
+
+      .cls-3 {
+        fill: url(#Nepojmenovaný_přechod_8);
+      }
+
+      .cls-4 {
+        fill: url(#Nepojmenovaný_přechod_6);
+      }
+
+      .cls-14 {
+        clip-path: url(#clippath-6);
+      }
+
+      .cls-5 {
+        fill: none;
+      }
+
+      .cls-6 {
+        fill: url(#Nepojmenovaný_přechod_7);
+      }
+
+      .cls-15 {
+        clip-path: url(#clippath-7);
+      }
+
+      .cls-16 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-17 {
+        clip-path: url(#clippath-4);
+      }
+
+      .cls-7 {
+        fill: url(#Nepojmenovaný_přechod);
+      }
+
+      .cls-18 {
+        clip-path: url(#clippath-12);
+      }
+
+      .cls-8 {
+        fill: url(#Nepojmenovaný_přechod_10);
+      }
+
+      .cls-9 {
+        fill: url(#Nepojmenovaný_přechod_3);
+      }
+
+      .cls-10 {
+        fill: url(#Nepojmenovaný_přechod_2);
+      }
+
+      .cls-19 {
+        clip-path: url(#clippath-9);
+      }
+
+      .cls-20 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-11 {
+        fill: url(#Nepojmenovaný_přechod_4);
+      }
+
+      .cls-21 {
+        clip-path: url(#clippath-3);
+      }
+
+      .cls-22 {
+        clip-path: url(#clippath-8);
+      }
+
+      .cls-23 {
+        clip-path: url(#clippath-5);
+      }
+
+      .cls-24 {
+        clip-path: url(#clippath-10);
+      }
+    </style>
+    <clipPath id="clippath">
+      <path class="cls-5" d="M195.35,42.53c-1.37-.27-2.14-1.04-2.3-2.34-.17-1.33.38-2.39,1.67-2.89.84-.32,1.75-.49,2.65-.6,1.92-.24,5.32.16,6.87.75-1.18,3.07-4.43,5.2-7.6,5.2-.43,0-.86-.04-1.28-.12M189.6,17.81c-2.65,1.57-4.3,3.81-4.53,7.05,3.35.9,6.66,1.78,10.05,2.69,0-.27,0-.44,0-.62,0-1.14.57-1.93,1.61-2.3.61-.22,1.28-.34,1.93-.38,3.97-.21,5.65,2.96,5.32,6.23-3.01-.48-6.03-.74-9.08-.42-2.74.29-5.34.97-7.67,2.5-5.21,3.44-5.64,11.42-.81,15.37,2.03,1.66,4.45,2.27,7.02,2.35,5,.15,9-1.66,11.63-6.06.05-.08.13-.15.31-.37v5.36h8.78c.01-.19.03-.33.03-.46,0-5.96.02-11.92,0-17.87,0-2.1-.24-4.19-.91-6.21-1.02-3.08-2.84-5.54-5.71-7.15-2.58-1.45-5.39-1.95-8.3-1.99-.11,0-.21,0-.32,0-3.3,0-6.48.56-9.36,2.26"/>
+    </clipPath>
+    <linearGradient id="Nepojmenovaný_přechod" data-name="Nepojmenovaný přechod" x1="-32.73" y1="82.2" x2="-31.73" y2="82.2" gradientTransform="translate(5326.1 13280.61) scale(161.17 -161.17)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5ab4f7"/>
+      <stop offset="1" stop-color="#623ff5"/>
+    </linearGradient>
+    <clipPath id="clippath-1">
+      <path class="cls-5" d="M195.35,42.53c-1.37-.27-2.14-1.04-2.3-2.34-.17-1.33.38-2.39,1.67-2.89.84-.32,1.75-.49,2.65-.6,1.92-.24,5.32.16,6.87.75-1.18,3.07-4.43,5.2-7.6,5.2-.43,0-.86-.04-1.28-.12M189.6,17.81c-2.65,1.57-4.3,3.81-4.53,7.05,3.35.9,6.66,1.78,10.05,2.69,0-.27,0-.44,0-.62,0-1.14.57-1.93,1.61-2.3.61-.22,1.28-.34,1.93-.38,3.97-.21,5.65,2.96,5.32,6.23-3.01-.48-6.03-.74-9.08-.42-2.74.29-5.34.97-7.67,2.5-5.21,3.44-5.64,11.42-.81,15.37,2.03,1.66,4.45,2.27,7.02,2.35,5,.15,9-1.66,11.63-6.06.05-.08.13-.15.31-.37v5.36h8.78c.01-.19.03-.33.03-.46,0-5.96.02-11.92,0-17.87,0-2.1-.24-4.19-.91-6.21-1.02-3.08-2.84-5.54-5.71-7.15-2.58-1.45-5.39-1.95-8.3-1.99-.11,0-.21,0-.32,0-3.3,0-6.48.56-9.36,2.26"/>
+    </clipPath>
+    <clipPath id="clippath-2">
+      <rect class="cls-5" x="47.14" y="28.52" width="110.68" height="25.65"/>
+    </clipPath>
+    <clipPath id="clippath-3">
+      <rect class="cls-5" x="141.7" y="36.58" width="16.12" height="17.59"/>
+    </clipPath>
+    <linearGradient id="Nepojmenovaný_přechod_2" data-name="Nepojmenovaný přechod 2" x1="-32.73" y1="82.05" x2="-31.73" y2="82.05" gradientTransform="translate(-5495.52 2219.44) rotate(90) scale(68.8 -68.8)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#679fd6"/>
+      <stop offset=".5" stop-color="#5880c0"/>
+      <stop offset="1" stop-color="#495ca5"/>
+    </linearGradient>
+    <clipPath id="clippath-4">
+      <path class="cls-5" d="M61.52,20.98c-.14.29-.28.58-.42.87-.05-.02-.1-.03-.15-.05v-4.93h-9.97v32.6h10v-.87c0-4.95-.01-9.91.01-14.86,0-1.11.09-2.24.25-3.34.27-1.76.82-3.43,2.13-4.72.92-.91,2.04-1.33,3.32-.94,1.24.37,1.84,1.35,2.11,2.56.3,1.37.19,2.74-.25,4.05-.42,1.26-.95,2.49-1.42,3.73.01,0,.06.03.1.02,3.62-.96,7.23-1.92,10.85-2.9.18-.05.39-.3.45-.5.73-2.7.95-5.44.38-8.19-.6-2.84-1.91-5.24-4.57-6.66-1.4-.75-2.9-1.11-4.37-1.11-3.43,0-6.75,1.92-8.43,5.24"/>
+    </clipPath>
+    <linearGradient id="Nepojmenovaný_přechod_3" data-name="Nepojmenovaný přechod 3" x1="-32.73" y1="82.2" x2="-31.73" y2="82.2" gradientTransform="translate(5326.1 13280.61) scale(161.17 -161.17)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5ab4f7"/>
+      <stop offset="1" stop-color="#623ff5"/>
+    </linearGradient>
+    <clipPath id="clippath-5">
+      <path class="cls-5" d="M50.97,28.36v21.11h10v-.87c0-4.95-.01-9.91.01-14.86,0-1.11.09-2.24.25-3.34.11-.7.26-1.39.49-2.05h-10.75ZM68.94,28.36c.07,1.02-.07,2.02-.4,3-.42,1.26-.95,2.49-1.42,3.73.01,0,.06.03.1.02,3.62-.96,7.23-1.92,10.85-2.9.18-.05.39-.3.45-.5.3-1.11.51-2.23.62-3.35h-10.19Z"/>
+    </clipPath>
+    <clipPath id="clippath-6">
+      <rect class="cls-5" x="4.64" y="36.42" width="15.39" height="17.59"/>
+    </clipPath>
+    <linearGradient id="Nepojmenovaný_přechod_4" data-name="Nepojmenovaný přechod 4" x1="-32.73" y1="82.04" x2="-31.73" y2="82.04" gradientTransform="translate(-5632.43 2285.53) rotate(90) scale(68.8 -68.8)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#679fd6"/>
+      <stop offset=".5" stop-color="#5880c0"/>
+      <stop offset="1" stop-color="#495ca5"/>
+    </linearGradient>
+    <clipPath id="clippath-7">
+      <path class="cls-5" d="M87.96,10.22v6.36h-6.4v8.84h6.41v.78c0,3.84-.02,7.67.01,11.51.01,1.3.08,2.61.29,3.88.59,3.51,2.24,6.36,5.71,7.69,1.43.55,3,.82,4.53.96,2.46.23,4.88-.04,7.16-1.12.56-.26.8-.58.79-1.24-.05-2.44-.02-4.88-.02-7.33v-.8c-.62.35-1.08.72-1.61.9-.89.32-1.81.7-2.74.77-2.91.22-4.09-.93-4.09-3.84,0-3.83,0-7.67,0-11.51v-.69h0v-2.83l9.04,2.82h.05v-8.79h-9.1V7.54c-3.41.91-6.7,1.8-10.03,2.69"/>
+    </clipPath>
+    <linearGradient id="Nepojmenovaný_přechod_5" data-name="Nepojmenovaný přechod 5" x1="-32.73" y1="82.22" x2="-31.73" y2="82.22" gradientTransform="translate(5326.1 13280.61) scale(161.17 -161.17)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5ab4f7"/>
+      <stop offset="1" stop-color="#623ff5"/>
+    </linearGradient>
+    <clipPath id="clippath-8">
+      <polygon class="cls-5" points="112.57 16.88 112.57 49.49 119.16 49.49 122.54 38.54 122.54 16.88 112.57 16.88"/>
+    </clipPath>
+    <linearGradient id="Nepojmenovaný_přechod_6" data-name="Nepojmenovaný přechod 6" x1="-32.73" y1="82.2" x2="-31.73" y2="82.2" gradientTransform="translate(5326.1 13280.61) scale(161.17 -161.17)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5ab4f7"/>
+      <stop offset="1" stop-color="#623ff5"/>
+    </linearGradient>
+    <clipPath id="clippath-9">
+      <path class="cls-5" d="M159.07,21.27c-.18.36-.35.72-.56,1.14-1.78-4.33-4.91-6.64-9.53-6.58-4.55.06-7.68,2.44-9.8,6.39v-5.34h-9.98v32.59h9.99v-.8c0-5-.05-10,.03-15,.03-1.6.28-3.23.66-4.79.45-1.79,1.43-3.32,3.16-4.19,2.16-1.09,4.35-.28,5.21,1.97.29.75.49,1.59.5,2.39.05,6.53.04,13.06.06,19.59,0,.27,0,.54,0,.82h10.08v-.87c0-5.02-.02-10.05.02-15.07,0-1.2.1-2.42.34-3.6.36-1.83,1.13-3.48,2.74-4.59,2.35-1.62,5.01-.75,5.85,1.96.29.94.4,1.97.41,2.96.04,6.14.02,12.28.02,18.43v.79h6.66l3.37-10.92c0-3,0-5.99,0-8.99,0-2.32-.24-4.6-.96-6.82-.76-2.34-1.96-4.38-4.14-5.67-1.54-.91-3.24-1.34-4.94-1.34-3.71,0-7.38,2.03-9.17,5.53"/>
+    </clipPath>
+    <linearGradient id="Nepojmenovaný_přechod_7" data-name="Nepojmenovaný přechod 7" x1="-32.73" y1="82.2" x2="-31.73" y2="82.2" gradientTransform="translate(5326.1 13280.61) scale(161.17 -161.17)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5ab4f7"/>
+      <stop offset="1" stop-color="#623ff5"/>
+    </linearGradient>
+    <clipPath id="clippath-10">
+      <polygon class="cls-5" points="117.62 0 113.63 1.64 112.57 8.03 117.6 11.76 123.25 5.88 117.62 0"/>
+    </clipPath>
+    <linearGradient id="Nepojmenovaný_přechod_8" data-name="Nepojmenovaný přechod 8" x1="-32.73" y1="82.37" x2="-31.73" y2="82.37" gradientTransform="translate(5326.1 13280.61) scale(161.17 -161.17)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5ab4f7"/>
+      <stop offset="1" stop-color="#623ff5"/>
+    </linearGradient>
+    <clipPath id="clippath-11">
+      <path class="cls-5" d="M14.56,10.74C10.18,22.56,5.79,34.37,1.41,46.19c-.47,1.26-1.41,3.84-1.41,3.84h10.84c.42.01.54-.18.66-.51.81-2.3,2.62-7.39,2.62-7.39l3.19-8.97c.15,0,10.02-28.02,10.02-28.02-1.18-.55-2.49-.86-3.84-.87h-.05c-4.04,0-7.36,2.42-8.86,6.46"/>
+    </clipPath>
+    <linearGradient id="Nepojmenovaný_přechod_9" data-name="Nepojmenovaný přechod 9" x1="-32.73" y1="82.22" x2="-31.73" y2="82.22" gradientTransform="translate(-1276.43 -3227.43) rotate(-180) scale(39.58 -39.58)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5ab4f7"/>
+      <stop offset="1" stop-color="#623ff5"/>
+    </linearGradient>
+    <clipPath id="clippath-12">
+      <path class="cls-5" d="M23.63,15.52c2.15,6,4.22,11.78,6.32,17.65h-12.65l-3.19,8.97,19.21-2.43v2.12c0,.27.05.86.26,1.52.72,2.07,1.47,4.14,2.19,6.21.12.36.28.5.67.49.98-.03,1.97,0,2.95,0h7.4c-.09-.27-.16-.48-.24-.69-3.2-8.63-6.4-17.27-9.61-25.9-1.66-4.47-3.27-8.95-4.99-13.39-.84-2.17-2.45-3.85-4.42-4.82-.07-.03-.15-.06-.22-.09,0,0-4.38,12.29-3.69,10.38"/>
+    </clipPath>
+    <linearGradient id="Nepojmenovaný_přechod_10" data-name="Nepojmenovaný přechod 10" x1="-32.73" y1="82.27" x2="-31.73" y2="82.27" gradientTransform="translate(2477.9 -934.61) rotate(-90) scale(29.75 -29.75)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5ab4f7"/>
+      <stop offset="1" stop-color="#623ff5"/>
+    </linearGradient>
+  </defs>
+  <g class="cls-20">
+    <rect class="cls-7" x="181.6" y="15.54" width="32.62" height="34.89"/>
+  </g>
+  <g class="cls-16">
+    <g class="cls-13">
+      <g class="cls-21">
+        <rect class="cls-10" x="139.2" y="35.33" width="21.13" height="20.08" transform="translate(67.63 178.57) rotate(-75.2)"/>
+      </g>
+    </g>
+  </g>
+  <g class="cls-17">
+    <rect class="cls-9" x="50.97" y="15.75" width="28.49" height="33.72"/>
+  </g>
+  <g class="cls-23">
+    <g class="cls-14">
+      <rect class="cls-11" x="1.86" y="35.53" width="20.94" height="19.37" transform="translate(-34.53 45.59) rotate(-75.2)"/>
+    </g>
+  </g>
+  <g class="cls-15">
+    <rect class="cls-1" x="81.56" y="7.54" width="25.54" height="42.94"/>
+  </g>
+  <g class="cls-22">
+    <rect class="cls-4" x="112.57" y="16.88" width="9.97" height="32.61"/>
+  </g>
+  <g class="cls-19">
+    <rect class="cls-6" x="129.2" y="15.74" width="49.09" height="33.74"/>
+  </g>
+  <g class="cls-24">
+    <rect class="cls-3" x="112.57" width="10.69" height="11.76"/>
+  </g>
+  <g class="cls-12">
+    <rect class="cls-2" x="-12.66" y="5.96" width="52.66" height="42.41" transform="translate(-16.63 29.71) rotate(-68.1)"/>
+  </g>
+  <g class="cls-18">
+    <rect class="cls-8" x="6.84" y=".63" width="47.23" height="53.94" transform="translate(-8.17 13.55) rotate(-22.2)"/>
+  </g>
+</svg>
