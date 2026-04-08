@@ -1,5 +1,5 @@
 // Triggered automatically by Netlify when a form submission is created.
-// Sends a formatted email matching the KHKZK format.
+// Sends a formatted email matching the KHKZK format exactly.
 
 exports.handler = async function (event) {
   const { RESEND_API_KEY, NOTIFICATION_EMAIL = "info@khkzk.cz" } = process.env;
@@ -32,38 +32,31 @@ exports.handler = async function (event) {
     });
   }
 
-  // Format email body — matching KHKZK format
+  // Format email body — matching KHKZK format exactly
   const lines = [
-    "Zpráva z kontaktního formuláře www stránky",
-    "aivpraxi.khkzk.cz",
-    "",
+    "Zpráva z kontaktního formuláře www stránek",
+    "KHK.cz",
     "Název stránky",
     "AI konference 2026",
-    "",
     "URL",
     "https://aivpraxi.khkzk.cz",
-    "",
     "Název organizace",
     data.organizace || "",
-    "",
-    "IČO",
+    "Ičo",
     data.ico || "",
-    "",
     "Kurz",
     "AI konference 2026",
-    "",
     "Účastníci",
   ];
 
   participants.forEach((p, i) => {
-    if (i > 0) lines.push("");
-    lines.push(`Jméno:`);
+    lines.push("Jméno:");
     lines.push(p.jmeno);
-    lines.push(`Pozice:`);
+    lines.push("Pozice:");
     lines.push(p.pozice);
-    lines.push(`E-mail:`);
+    lines.push("E-mail:");
     lines.push(p.email);
-    lines.push(`Telefonní číslo:`);
+    lines.push("Telefonní číslo:");
     lines.push(p.telefon);
   });
 
@@ -72,13 +65,6 @@ exports.handler = async function (event) {
   lines.push(data.poznamka || "");
 
   const textBody = lines.join("\n");
-
-  // Send via Resend API
-  const recipients = [NOTIFICATION_EMAIL];
-  // Also send copy to submitter's email (first participant)
-  if (participants[0]?.email) {
-    // Don't CC the submitter — only send to KHKZK
-  }
 
   try {
     const res = await fetch("https://api.resend.com/emails", {
@@ -89,8 +75,8 @@ exports.handler = async function (event) {
       },
       body: JSON.stringify({
         from: "AI konference 2026 <onboarding@resend.dev>",
-        to: recipients,
-        subject: "Online přihláška na kurz — AI konference 2026",
+        to: [NOTIFICATION_EMAIL],
+        subject: "Online přihláška na kurz",
         text: textBody,
       }),
     });
@@ -98,7 +84,6 @@ exports.handler = async function (event) {
     if (!res.ok) {
       const err = await res.text();
       console.error("Resend error:", err);
-      // Don't fail — data is still in Netlify Forms
       return { statusCode: 200, body: "Email failed but submission saved" };
     }
 
