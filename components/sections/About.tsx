@@ -32,7 +32,7 @@ export function About() {
     <section id="o-konferenci" className="relative py-28 px-6">
       <div className="max-w-6xl mx-auto">
         {/* Remotion section header */}
-        <div className="h-[200px] mb-6">
+        <div className="h-[120px] sm:h-[200px] mb-6">
           <RemotionInView
             component={SectionActivation}
             inputProps={{ sectionId: "01 // System_Intel", title: "AI v praxi — ne v teorii", subtitle: "Konference pro ty, kteří chtějí vědět jak na to" }}

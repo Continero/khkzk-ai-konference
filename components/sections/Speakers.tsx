@@ -12,7 +12,7 @@ export function Speakers() {
     <section id="recnici" className="relative py-28 px-6">
       <div className="max-w-6xl mx-auto">
         {/* Remotion section header */}
-        <div className="h-[200px] mb-6">
+        <div className="h-[120px] sm:h-[200px] mb-6">
           <RemotionInView
             component={SectionActivation}
             inputProps={{ sectionId: "03 // Personnel_Database", title: "Řečníci", subtitle: "Identifikovaní experti s ověřenými výsledky" }}

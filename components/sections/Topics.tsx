@@ -33,7 +33,7 @@ export function Topics() {
   return (
     <section id="temata" className="relative py-28 px-6">
       <div className="max-w-5xl mx-auto">
-        <div className="h-[200px] mb-6">
+        <div className="h-[120px] sm:h-[200px] mb-6">
           <RemotionInView
             component={SectionActivation}
             inputProps={{ sectionId: "02 // Core_Modules", title: "Hlavní témata", subtitle: "Tři pilíře konference — všechny zaměřené na praxi" }}

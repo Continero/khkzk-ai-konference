@@ -38,7 +38,7 @@ export function Countdown() {
         >
           ▸ Time_to_launch
         </motion.p>
-        <div className="flex items-center justify-center gap-4 sm:gap-8">
+        <div className="flex items-center justify-center gap-2 sm:gap-8">
           {(Object.keys(labels) as (keyof TimeLeft)[]).map((key, i) => (
             <motion.div
               key={key}
@@ -46,14 +46,14 @@ export function Countdown() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="flex flex-col items-center"
+              className="flex flex-col items-center flex-1 sm:flex-none"
             >
-              <div className="relative w-24 sm:w-32 h-24 sm:h-32 flex items-center justify-center hud-panel rounded-lg">
-                <span className="font-mono text-5xl sm:text-7xl font-bold text-accent-cyan holo-glow-strong tabular-nums">
+              <div className="relative w-full sm:w-32 h-20 sm:h-32 flex items-center justify-center hud-panel rounded-lg">
+                <span className="font-mono text-4xl sm:text-7xl font-bold text-accent-cyan holo-glow-strong tabular-nums">
                   {String(time[key]).padStart(2, "0")}
                 </span>
               </div>
-              <span className="font-mono text-xs text-text-muted mt-3 tracking-[0.2em]">
+              <span className="font-mono text-[10px] sm:text-xs text-text-muted mt-2 sm:mt-3 tracking-[0.2em]">
                 {labels[key]}
               </span>
             </motion.div>
