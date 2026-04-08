@@ -215,12 +215,14 @@ export const RobotSchematic: React.FC = () => {
 
   // Idle animations (continuous after assembly ~frame 90)
   const idle = frame > 90;
-  const breathe = idle ? Math.sin(frame * 0.025) * 2 : 0;
-  const scanY = idle ? 80 + ((frame * 1.5) % 400) : -10;
-  const scanOp = idle ? 0.15 + Math.sin(frame * 0.08) * 0.08 : 0;
-  const arcPulseR = idle ? 18 + Math.sin(frame * 0.06) * 6 : interpolate(frame, [20, 30], [0, 18], { extrapolateRight: "clamp" });
-  const arcPulseOp = idle ? 0.15 + Math.sin(frame * 0.06) * 0.1 : 0.2;
-  const diagFlicker = (i: number) => idle ? 0.7 + Math.sin(frame * 0.05 + i * 1.5) * 0.3 : 1;
+  const breathe = idle ? Math.sin(frame * 0.03) * 4 : 0;
+  const scanY = idle ? 60 + ((frame * 2) % 420) : -10;
+  const scanOp = idle ? 0.3 + Math.sin(frame * 0.08) * 0.15 : 0;
+  const arcPulseR = idle ? 18 + Math.sin(frame * 0.06) * 10 : interpolate(frame, [20, 30], [0, 18], { extrapolateRight: "clamp" });
+  const arcPulseOp = idle ? 0.25 + Math.sin(frame * 0.06) * 0.15 : 0.2;
+  const diagFlicker = (i: number) => idle ? 0.5 + Math.sin(frame * 0.07 + i * 2) * 0.5 : 1;
+  // Eye visor glow cycle
+  const visorGlow = idle ? 0.15 + Math.sin(frame * 0.04) * 0.12 : 0.15;
 
   return (
     <AbsoluteFill style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -273,8 +275,17 @@ export const RobotSchematic: React.FC = () => {
 
         {/* Scanning line — continuous horizontal sweep */}
         {idle && (
-          <line x1="300" y1={scanY} x2="540" y2={scanY}
-            stroke="rgba(0,212,255,0.12)" strokeWidth={1} opacity={scanOp} />
+          <>
+            <line x1="280" y1={scanY} x2="560" y2={scanY}
+              stroke="rgba(0,212,255,0.25)" strokeWidth={1.5} opacity={scanOp} />
+            {/* Scanning ring around robot */}
+            <ellipse cx="420" cy="260" rx={80 + Math.sin(frame * 0.03) * 15} ry={12}
+              fill="none" stroke="rgba(0,212,255,0.12)" strokeWidth={0.8}
+              transform={`translate(0, ${Math.sin(frame * 0.02) * 60})`} />
+            {/* Visor eye glow */}
+            <ellipse cx="420" cy="95" rx="25" ry="5"
+              fill={`rgba(0,212,255,${visorGlow})`} filter="url(#softGlow)" />
+          </>
         )}
 
         {/* Diagnostic readouts */}

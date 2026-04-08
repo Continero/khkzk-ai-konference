@@ -61,7 +61,7 @@ export function RemotionInView<T extends Record<string, unknown>>({
           fps={fps}
           autoPlay
           loop={loop}
-          moveToBeginningWhenEnded={false}
+          moveToBeginningWhenEnded={!loop}
           controls={false}
           style={{ width: "100%", height: "100%", background: "transparent" }}
         />
