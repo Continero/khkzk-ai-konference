@@ -40,16 +40,16 @@ export function Registration() {
               whileHover={{ y: -4 }}
               className="hud-panel rounded-lg overflow-hidden h-full flex flex-col shadow-[0_0_30px_rgba(0,212,255,0.06)]"
             >
-              <div className="h-[2px] bg-gradient-to-r from-transparent via-accent-cyan to-transparent" />
+              <div className="h-[2px] bg-gradient-to-r from-transparent via-accent-gold to-transparent" />
               <div className="p-7 flex flex-col flex-1">
-                <span className="inline-block self-start mb-3 font-mono text-[11px] px-2 py-0.5 rounded bg-accent-cyan/10 text-accent-cyan border border-accent-cyan/20 tracking-widest uppercase">
+                <span className="inline-block self-start mb-3 font-mono text-[11px] px-2 py-0.5 rounded bg-accent-gold/10 text-accent-gold border border-accent-gold/20 tracking-widest uppercase">
                   Early Bird
                 </span>
                 <p className="font-mono text-xs text-text-muted mb-5">{earlyBird.period}</p>
                 <div className="space-y-4 mb-6">
                   <div>
                     <p className="font-mono text-xs text-text-muted uppercase tracking-wider mb-1">Člen KHKZK</p>
-                    <span className="text-4xl font-extrabold text-accent-cyan holo-glow-strong">{earlyBird.member.price}</span>
+                    <span className="text-4xl font-extrabold text-accent-gold">{earlyBird.member.price}</span>
                     <span className="font-mono text-xs text-text-muted ml-2">bez DPH</span>
                   </div>
                   <div>
@@ -105,7 +105,7 @@ export function Registration() {
           <div className="flex flex-wrap items-center justify-center gap-4 max-w-3xl mx-auto">
             {perks.map((perk) => (
               <div key={perk} className="flex items-center gap-2 text-base text-text-secondary">
-                <span className="text-accent-cyan font-mono text-xs">▸</span>
+                <span className="text-accent-gold font-mono text-xs">▸</span>
                 {perk}
               </div>
             ))}

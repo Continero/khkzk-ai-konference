@@ -70,7 +70,7 @@ export function About() {
               {surveyHighlights.map((item, i) => (
                 <ScrollReveal key={i} delay={0.05 + i * 0.06}>
                   <div className="hud-panel rounded-lg p-5 flex items-start gap-4 h-full">
-                    <span className="font-mono text-2xl font-bold text-accent-cyan shrink-0 holo-glow-strong">{item.pct}</span>
+                    <span className={`font-mono text-2xl font-bold shrink-0 ${i % 2 === 0 ? "text-accent-gold" : "text-accent-cyan holo-glow-strong"}`}>{item.pct}</span>
                     <p className="text-text-secondary text-base leading-relaxed">{item.text}</p>
                   </div>
                 </ScrollReveal>

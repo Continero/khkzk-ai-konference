@@ -58,7 +58,7 @@ export function Topics() {
                 className="group h-full"
               >
                 <div className="hud-panel rounded-lg p-7 h-full relative overflow-hidden">
-                  <div className="text-accent-cyan mb-4 group-hover:drop-shadow-[0_0_8px_rgba(0,212,255,0.4)] transition-all">
+                  <div className="text-accent-gold mb-4 group-hover:drop-shadow-[0_0_8px_rgba(255,159,28,0.4)] transition-all">
                     {icons[topic.icon]}
                   </div>
 
@@ -89,7 +89,7 @@ export function Topics() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             {formats.map((f, i) => (
               <div key={f.label} className="flex items-center gap-3 rounded-lg border border-accent-cyan/10 px-5 py-4 bg-accent-cyan/[0.03]">
-                <span className="font-mono text-accent-cyan text-sm font-bold shrink-0">▸</span>
+                <span className="font-mono text-accent-gold text-sm font-bold shrink-0">▸</span>
                 <div>
                   <p className="font-bold text-sm holo-glow">{f.label}</p>
                   <p className="text-text-secondary text-xs">{f.desc}</p>
