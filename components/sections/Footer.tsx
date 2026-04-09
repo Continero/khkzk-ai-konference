@@ -11,7 +11,7 @@ export function Footer() {
             <h3 className="font-mono text-xs text-accent-cyan/50 tracking-widest uppercase mb-3">
               // Organizátor
             </h3>
-            <img src="/khkzk-logo.svg" alt="KHKZK — organizátor konference AI v praxi" className="h-10 brightness-0 invert opacity-60 mb-2" />
+            <img src="/khkzk-logo.svg" alt="KHKZK — organizátor konference AI v praxi" className="h-10 brightness-[2.5] opacity-75 mb-2" />
             <p className="text-text-secondary text-base">{conferenceInfo.organizer}</p>
             <div className="flex items-center gap-3 mt-3">
               <a href="https://www.khkzk.cz" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent-cyan transition-colors" aria-label="Web">

@@ -76,7 +76,7 @@ export function Navigation() {
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-14">
           <a href="#hero" className="flex items-center gap-3">
-            <img src="/khkzk-logo.svg" alt="Krajská hospodářská komora Zlínského kraje — logo" className="h-11 brightness-0 invert opacity-70" />
+            <img src="/khkzk-logo.svg" alt="Krajská hospodářská komora Zlínského kraje — logo" className="h-11 brightness-[2.5] opacity-85" />
             <span className="hidden sm:flex flex-col leading-tight">
               <span className="text-base font-bold tracking-wide">AI v praxi <span className="text-accent-cyan">2026</span></span>
               <span className="text-[10px] text-text-muted tracking-wider uppercase">Konference · 20. května · Zlín</span>
