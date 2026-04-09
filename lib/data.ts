@@ -25,22 +25,13 @@ export interface Testimonial {
 
 export const speakers: Speaker[] = [
   {
-    name: "Zdeněk Huspenina",
-    company: "Blogic",
-    talk: "AI Business Solutions — od AI agentů po prediktivní analytiku",
-    bio: "Head of AI Business Solutions ve společnosti Blogic. Specializuje se na transformaci komplexních firemních výzev do škálovatelných řešení poháněných umělou inteligencí.",
+    name: "Dalibor Mráz",
+    company: "ČERNÁ.AI / Webvalley",
+    talk: "AI-driven region — jak transformovat kraj pomocí AI",
+    bio: "Lídr platformy ČERNÁ.AI. Ambicí je transformovat Moravskoslezský kraj v AI-driven region prostřednictvím mezinárodních misí a strategických partnerství. AI director firmy Webvalley.",
     status: "confirmed",
-    initials: "ZH",
-    photo: "/recnici/zdenek_huspenina.png",
-  },
-  {
-    name: "Radek Štěrba",
-    company: "Microsoft",
-    talk: "Copilot+ PC — nová třída zařízení s lokální AI",
-    bio: "Technical Specialist pro Microsoft. 16 let zkušeností z Intelu v oblasti retailu a technologické edukace. Zaměřen na Windows 11, bezpečnost a moderní AI včetně Copilot+ PC.",
-    status: "confirmed",
-    initials: "RS",
-    photo: "/recnici/radek_sterba.png",
+    initials: "DM",
+    photo: "/recnici/dalibor_mraz.png",
   },
   {
     name: "David Fogl",
@@ -52,6 +43,15 @@ export const speakers: Speaker[] = [
     photo: "/recnici/david_fogl.png",
   },
   {
+    name: "Radek Štěrba",
+    company: "Microsoft",
+    talk: "Copilot+ PC — nová třída zařízení s lokální AI",
+    bio: "Technical Specialist pro Microsoft. 16 let zkušeností z Intelu v oblasti retailu a technologické edukace. Zaměřen na Windows 11, bezpečnost a moderní AI včetně Copilot+ PC.",
+    status: "confirmed",
+    initials: "RS",
+    photo: "/recnici/radek_sterba.png",
+  },
+  {
     name: "Martin Pernica",
     company: "Elixeum / Flying Rat Studio",
     talk: "AI není zaměstnanec — jak s ní pracovat v praxi",
@@ -61,15 +61,6 @@ export const speakers: Speaker[] = [
     photo: "/recnici/martin_pernica.png",
   },
   {
-    name: "Dalibor Mráz",
-    company: "ČERNÁ.AI / Webvalley",
-    talk: "AI-driven region — jak transformovat kraj pomocí AI",
-    bio: "Lídr platformy ČERNÁ.AI. Ambicí je transformovat Moravskoslezský kraj v AI-driven region prostřednictvím mezinárodních misí a strategických partnerství. AI director firmy Webvalley.",
-    status: "confirmed",
-    initials: "DM",
-    photo: "/recnici/dalibor_mraz.png",
-  },
-  {
     name: "Marek Olbert",
     company: "Continental Barum",
     talk: "Strojové vidění",
@@ -77,6 +68,15 @@ export const speakers: Speaker[] = [
     status: "confirmed",
     initials: "MO",
     photo: "/recnici/martin_olbert.png",
+  },
+  {
+    name: "Zdeněk Huspenina",
+    company: "Blogic",
+    talk: "AI Business Solutions — od AI agentů po prediktivní analytiku",
+    bio: "Head of AI Business Solutions ve společnosti Blogic. Specializuje se na transformaci komplexních firemních výzev do škálovatelných řešení poháněných umělou inteligencí.",
+    status: "confirmed",
+    initials: "ZH",
+    photo: "/recnici/zdenek_huspenina.png",
   },
 ];
 
