@@ -50,7 +50,7 @@ export function Hero() {
       {/* Real HTML overlay — info badges + clickable CTA */}
       <motion.div
         style={{ opacity }}
-        className="absolute z-20 bottom-[18%] flex flex-col items-center gap-5"
+        className="absolute z-20 bottom-[8%] sm:bottom-[12%] lg:bottom-[18%] flex flex-col items-center gap-5"
       >
         {/* Info badges */}
         <motion.div
@@ -86,7 +86,7 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 4, duration: 1 }}
-        className="absolute bottom-8 flex flex-col items-center gap-2 z-10"
+        className="absolute bottom-3 sm:bottom-5 lg:bottom-8 flex flex-col items-center gap-2 z-10"
       >
         <span className="font-mono text-[10px] text-text-muted tracking-[0.3em] uppercase">Scroll_down</span>
         <motion.div animate={{ y: [0, 6, 0] }} transition={{ duration: 2, repeat: Infinity }}>
