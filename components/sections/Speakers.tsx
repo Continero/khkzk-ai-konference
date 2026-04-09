@@ -36,7 +36,7 @@ export function Speakers() {
                       src={speaker.photo}
                       alt={speaker.name}
                       loading="lazy"
-                      className="w-full h-full object-cover object-top opacity-80 group-hover:opacity-100 transition-all duration-500 contrast-[1.1] brightness-[1.05]"
+                      className="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 transition-all duration-500 contrast-[1.2] brightness-[1.15]"
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center bg-bg-deep">
