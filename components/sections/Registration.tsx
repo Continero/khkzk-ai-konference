@@ -28,7 +28,7 @@ export function Registration() {
             Registrace
           </h2>
           <p className="text-text-secondary text-center mb-14 text-lg">
-            Autorizace přístupu — kapacita omezena
+            Autorizace přístupu. Kapacita omezena.
           </p>
         </ScrollReveal>
 
@@ -121,15 +121,15 @@ export function Registration() {
             <ul className="space-y-2 text-sm text-text-secondary mb-3">
               <li className="flex items-start gap-2">
                 <span className="text-accent-cyan font-mono text-xs mt-0.5">▸</span>
-                21 a více dnů před termínem — 25 % z ceny bez DPH
+                21 a více dnů před termínem: 25 % z ceny bez DPH
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-accent-cyan font-mono text-xs mt-0.5">▸</span>
-                20 až 11 dnů před termínem — 50 % z ceny bez DPH
+                20 až 11 dnů před termínem: 50 % z ceny bez DPH
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-accent-cyan font-mono text-xs mt-0.5">▸</span>
-                10 a méně dnů před termínem — 100 % z ceny bez DPH
+                10 a méně dnů před termínem: 100 % z ceny bez DPH
               </li>
             </ul>
             <p className="text-sm text-text-muted font-mono">

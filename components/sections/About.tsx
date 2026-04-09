@@ -12,7 +12,7 @@ const stats = [
 ];
 
 const surveyHighlights = [
-  { pct: "79%", text: "AI jako neviditelný pomocník — automatizace administrativy, faktur a plánování" },
+  { pct: "79%", text: "AI jako neviditelný pomocník: automatizace administrativy, faktur a plánování" },
   { pct: "68%", text: "Řešení pro malé a střední firmy, nejen velké korporace" },
   { pct: "61%", text: "Jak nové technologie mění řízení týmu a firemní kulturu" },
   { pct: "60%", text: "Jak zaměstnance naučit pracovat s novými technologiemi" },
@@ -30,11 +30,11 @@ export function About() {
             ▸ System_Intel
           </p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-center holo-glow">
-            AI v praxi — ne v teorii
+            AI v praxi, ne v teorii
           </h2>
           <p className="text-text-secondary text-center mb-14 text-lg max-w-3xl mx-auto leading-relaxed">
             Program konference jsme postavili na datech z průzkumu mezi 118 firmami Zlínského kraje.
-            Žádné buzzwordy — reálné příběhy firem, které AI nasadily a měří výsledky.
+            Žádné buzzwordy. Reálné příběhy firem, které AI nasadily a měří výsledky.
           </p>
         </ScrollReveal>
 

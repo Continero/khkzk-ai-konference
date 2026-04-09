@@ -45,7 +45,7 @@ export function Topics() {
             Co vás na konferenci čeká
           </h2>
           <p className="text-text-secondary text-center mb-14 text-lg">
-            Tři pilíře programu — všechny zaměřené na praxi
+            Tři pilíře programu zaměřené na praxi
           </p>
         </ScrollReveal>
 

@@ -27,7 +27,7 @@ export const speakers: Speaker[] = [
   {
     name: "Dalibor Mráz",
     company: "ČERNÁ.AI / Webvalley",
-    talk: "AI-driven region — jak transformovat kraj pomocí AI",
+    talk: "AI-driven region: jak transformovat kraj pomocí AI",
     bio: "Lídr platformy ČERNÁ.AI. Ambicí je transformovat Moravskoslezský kraj v AI-driven region prostřednictvím mezinárodních misí a strategických partnerství. AI director firmy Webvalley.",
     status: "confirmed",
     initials: "DM",
@@ -36,7 +36,7 @@ export const speakers: Speaker[] = [
   {
     name: "David Fogl",
     company: "Continero / MingleMinds.ai",
-    talk: "AI v praxi — od chatbotů po video analýzu",
+    talk: "AI v praxi: od chatbotů po video analýzu",
     bio: "Founder Continero a MingleMinds.ai. 10+ let v software testování a vývoji. Buduje a vede týmy, které navrhují, implementují a provozují AI řešení end to end.",
     status: "confirmed",
     initials: "DF",
@@ -45,7 +45,7 @@ export const speakers: Speaker[] = [
   {
     name: "Radek Štěrba",
     company: "Microsoft",
-    talk: "Copilot+ PC — nová třída zařízení s lokální AI",
+    talk: "Copilot+ PC: nová třída zařízení s lokální AI",
     bio: "Technical Specialist pro Microsoft. 16 let zkušeností z Intelu v oblasti retailu a technologické edukace. Zaměřen na Windows 11, bezpečnost a moderní AI včetně Copilot+ PC.",
     status: "confirmed",
     initials: "RS",
@@ -54,7 +54,7 @@ export const speakers: Speaker[] = [
   {
     name: "Martin Pernica",
     company: "Elixeum / Flying Rat Studio",
-    talk: "AI není zaměstnanec — jak s ní pracovat v praxi",
+    talk: "AI není zaměstnanec: jak s ní pracovat v praxi",
     bio: "CEO Flying Rat Studio a CTO Elixeum. Kombinuje hluboký technický background s praktickou zkušeností s nasazováním AI do reálních produktů. Místo hype přináší realistický pohled.",
     status: "confirmed",
     initials: "MP",
@@ -72,7 +72,7 @@ export const speakers: Speaker[] = [
   {
     name: "Zdeněk Huspenina",
     company: "Blogic",
-    talk: "AI Business Solutions — od AI agentů po prediktivní analytiku",
+    talk: "AI Business Solutions: od AI agentů po prediktivní analytiku",
     bio: "Head of AI Business Solutions ve společnosti Blogic. Specializuje se na transformaci komplexních firemních výzev do škálovatelných řešení poháněných umělou inteligencí.",
     status: "confirmed",
     initials: "ZH",
@@ -96,7 +96,7 @@ export const program: ProgramBlock[] = [
   },
   {
     time: "",
-    title: "Blok 1: Digitální kancelář — strategie a realizace",
+    title: "Blok 1: Digitální kancelář",
     description: "",
     type: "block-header",
   },
@@ -110,7 +110,7 @@ export const program: ProgramBlock[] = [
   {
     time: "9:40 — 10:10",
     title: "AI Agenti v administrativě",
-    description: "Konkrétní ukázky v Outlooku a jinde — co ten \"digitální zaměstnanec\" reálně odpracuje.",
+    description: "Konkrétní ukázky v Outlooku a jinde. Co ten \"digitální zaměstnanec\" reálně odpracuje.",
     type: "talk",
     speaker: "David Fogl, Continero",
   },
@@ -128,7 +128,7 @@ export const program: ProgramBlock[] = [
   },
   {
     time: "10:40 — 11:10",
-    title: "Microsoft Copilot — Váš standardní nástroj",
+    title: "Microsoft Copilot: Váš standardní nástroj",
     description: "Co všechno AI v Office zvládne a jak vypadá moderní práce s dokumenty.",
     type: "talk",
     speaker: "Radek Štěrba, eD system / Microsoft",
@@ -154,7 +154,7 @@ export const program: ProgramBlock[] = [
   },
   {
     time: "12:50 — 13:20",
-    title: "Case Study — TBD",
+    title: "Case Study (TBD)",
     description: "Reálný příklad integrace AI do vnitřních systémů.",
     type: "talk",
     speaker: "TBD",
@@ -309,12 +309,12 @@ export const conferenceInfo = {
   eventDate: new Date("2026-05-20T09:00:00"),
   venue: "Interhotel Zlín",
   address: "náměstí Práce 2512, 760 01 Zlín",
-  capacity: "150 — 200 účastníků",
+  capacity: "150 - 200 účastníků",
   organizer: "Krajská hospodářská komora Zlínského kraje",
   pricing: {
     earlyBird: {
       label: "Early Bird",
-      period: "9. 4. — 23. 4. 2026",
+      period: "9. 4. - 23. 4. 2026",
       member: { label: "Člen KHKZK", price: "2 390 Kč" },
       nonMember: { label: "Nečlen", price: "3 390 Kč" },
     },

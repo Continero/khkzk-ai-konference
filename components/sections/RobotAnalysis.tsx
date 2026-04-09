@@ -16,7 +16,7 @@ export function RobotAnalysis() {
             Robotika na konferenci
           </h2>
           <p className="text-text-secondary text-center mb-8 text-sm">
-            Humanoidní roboti, kolaborativní ramena a automatizace — naživo
+            Humanoidní roboti, kolaborativní ramena a automatizace. Naživo.
           </p>
         </ScrollReveal>
 

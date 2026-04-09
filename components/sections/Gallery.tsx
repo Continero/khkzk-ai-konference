@@ -32,7 +32,7 @@ export function Gallery() {
             Z minulých ročníků
           </h2>
           <p className="text-text-secondary text-center mb-14 text-lg">
-            Archiv vizuálních záznamů — konference 2025
+            Archiv vizuálních záznamů z konference 2025
           </p>
         </ScrollReveal>
 
