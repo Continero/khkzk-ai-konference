@@ -5,7 +5,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 const exhibitors: { name: string; logo: string | null; lightBg?: boolean }[] = [
   { name: "Mingleminds / Artima.ai", logo: "/logo_vystavovatele/artima-logo.svg" },
   { name: "Elixeum", logo: "/logo_vystavovatele/elixeum-logo.svg" },
-  { name: "eD system / Microsoft", logo: "/logo_partneri/eD_microsoft.jpg", lightBg: true },
+  { name: "Microsoft", logo: "/logo_vystavovatele/Microsoft_logo_(2012).svg", lightBg: true },
   { name: "EPRIN", logo: "/logo_vystavovatele/EPRIN_spol-_s_r-o-_idXfsqy1PU_1.png", lightBg: true },
   { name: "FAI UTB", logo: "/logo_vystavovatele/fai-utb.svg" },
   { name: "Scheduling", logo: "/logo_vystavovatele/schedule_logo.png" },
