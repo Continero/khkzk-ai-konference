@@ -52,15 +52,6 @@ export const speakers: Speaker[] = [
     photo: "/recnici/david_fogl.png",
   },
   {
-    name: "Bude oznámeno",
-    company: "TBD",
-    talk: "Téma bude upřesněno",
-    bio: "Tento slot je rezervován pro dalšího řečníka. Sledujte nás pro aktualizace.",
-    status: "pending",
-    initials: "?",
-    photo: "",
-  },
-  {
     name: "Martin Pernica",
     company: "Elixeum / Flying Rat Studio",
     talk: "AI není zaměstnanec — jak s ní pracovat v praxi",
