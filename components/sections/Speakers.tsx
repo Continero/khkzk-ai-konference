@@ -50,7 +50,7 @@ export function Speakers() {
                     <RemotionInView
                       component={BiometricScan}
                       inputProps={{ status: speaker.status, speakerId: `SPK_${String(i + 1).padStart(2, "0")}` }}
-                      durationInFrames={90}
+                      durationInFrames={600}
                       width={400}
                       height={220}
                       loop

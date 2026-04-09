@@ -5,24 +5,32 @@ export const BiometricScan: React.FC<{
   speakerId: string;
 }> = ({ status, speakerId }) => {
   const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
+  const { fps, durationInFrames } = useVideoConfig();
 
-  // Scan line sweeps down
-  const scanY = interpolate(frame, [0, 40], [0, 100], { extrapolateRight: "clamp" });
-  const scanOpacity = interpolate(frame, [0, 5, 35, 40], [0, 0.8, 0.8, 0], { extrapolateRight: "clamp" });
+  // First pass = intro animation (scan line, brackets draw in)
+  const isFirstPass = frame < durationInFrames;
+  const introFrame = Math.min(frame, durationInFrames - 1);
 
-  // Corner brackets draw in
-  const bracketSize = spring({ frame: Math.max(0, frame - 5), fps, config: { damping: 15, stiffness: 60 }, from: 0, to: 1 });
+  // Scan line sweeps down — only on first pass
+  const scanY = interpolate(introFrame, [0, 40], [0, 100], { extrapolateRight: "clamp" });
+  const scanOpacity = isFirstPass
+    ? interpolate(introFrame, [0, 5, 35, 40], [0, 0.8, 0.8, 0], { extrapolateRight: "clamp" })
+    : 0;
 
-  // Status text appears
-  const statusOpacity = spring({ frame: Math.max(0, frame - 35), fps, config: { damping: 20, stiffness: 80 }, from: 0, to: 1 });
+  // Corner brackets draw in — once, then stay
+  const bracketSize = spring({ frame: Math.max(0, introFrame - 5), fps, config: { damping: 15, stiffness: 60 }, from: 0, to: 1 });
 
-  // Arc around image
-  const arcProgress = interpolate(frame, [10, 50], [0, 1], { extrapolateRight: "clamp" });
+  // Status text appears — once, then stays
+  const statusOpacity = spring({ frame: Math.max(0, introFrame - 35), fps, config: { damping: 20, stiffness: 80 }, from: 0, to: 1 });
+
+  // Arc: draws in on first pass, then continuously rotates
   const arcRadius = 70;
   const arcCircumference = 2 * Math.PI * arcRadius;
+  const arcDrawIn = interpolate(introFrame, [10, 50], [0, 1], { extrapolateRight: "clamp" });
+  // Continuous rotation (full turn every ~120 frames = 4s)
+  const arcRotation = -90 + (frame * 3);
 
-  // Flicker
+  // Subtle flicker
   const flicker = frame % 80 > 76 ? 0.6 : frame % 120 > 116 ? 0.7 : 1;
 
   // ID blink
@@ -69,11 +77,11 @@ export const BiometricScan: React.FC<{
         />
       ))}
 
-      {/* Circular arc */}
+      {/* Circular arc — draws in then rotates continuously */}
       <svg
         width="100%" height="100%"
         viewBox="0 0 160 160"
-        style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%) rotate(-90deg)", opacity: 0.5 }}
+        style={{ position: "absolute", top: "50%", left: "50%", transform: `translate(-50%, -50%) rotate(${arcRotation}deg)`, opacity: 0.5 }}
       >
         <circle
           cx="80" cy="80" r={arcRadius}
@@ -83,7 +91,7 @@ export const BiometricScan: React.FC<{
           cx="80" cy="80" r={arcRadius}
           fill="none" stroke="rgba(0,212,255,0.35)" strokeWidth={1.5}
           strokeDasharray={arcCircumference}
-          strokeDashoffset={arcCircumference * (1 - arcProgress)}
+          strokeDashoffset={arcCircumference * (1 - arcDrawIn * 0.75)}
           strokeLinecap="round"
         />
       </svg>
