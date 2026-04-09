@@ -109,8 +109,8 @@ export const HeroComposition: React.FC = () => {
           Od experimentů k reálným výsledkům
         </div>
 
-        {/* Info badges + CTA are rendered as real HTML outside Remotion */}
-        <div style={{ height: 100 }} />
+        {/* Spacer — pushes content up to leave room for HTML overlay badges */}
+        <div style={{ height: 180 }} />
       </AbsoluteFill>
     </AbsoluteFill>
   );

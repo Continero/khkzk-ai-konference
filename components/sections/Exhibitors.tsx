@@ -7,7 +7,7 @@ const exhibitors: { name: string; logo: string | null }[] = [
   { name: "Elixeum", logo: null },
   { name: "Microsoft", logo: null },
   { name: "EPRIN", logo: "/logo_vystavovatele/eprin.jpg" },
-  { name: "UTB", logo: "/logo_vystavovatele/utb-bw-cz-full.svg" },
+  { name: "FAME UTB", logo: "/logo_vystavovatele/fame-bez400.png" },
   { name: "Scheduling", logo: null },
 ];
 
@@ -32,7 +32,7 @@ export function Exhibitors() {
                   <img
                     src={ex.logo}
                     alt={ex.name}
-                    className={`h-10 sm:h-12 object-contain opacity-80 hover:opacity-100 transition-opacity ${ex.name === "UTB" ? "brightness-0 invert" : ""}`}
+                    className="h-10 sm:h-12 object-contain opacity-80 hover:opacity-100 transition-opacity"
                   />
                 ) : (
                   <span className="font-mono text-sm text-text-secondary opacity-70">{ex.name}</span>
