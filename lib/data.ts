@@ -25,7 +25,7 @@ export interface Testimonial {
 
 export const speakers: Speaker[] = [
   {
-    name: "Ing. Zdeněk Huspenina, MBA",
+    name: "Zdeněk Huspenina",
     company: "Blogic",
     talk: "AI Business Solutions — od AI agentů po prediktivní analytiku",
     bio: "Head of AI Business Solutions ve společnosti Blogic. Specializuje se na transformaci komplexních firemních výzev do škálovatelných řešení poháněných umělou inteligencí.",
