@@ -76,7 +76,7 @@ export const speakers: Speaker[] = [
     bio: "Manufacturing Systems Manager ve společnosti Continental Barum s.r.o. Jak AI vidí do procesů fabriky a co z těch dat dokáže vytáhnout.",
     status: "confirmed",
     initials: "MO",
-    photo: "/recnici/martin_olbert.jpeg",
+    photo: "/recnici/martin_olbert.png",
   },
 ];
 
