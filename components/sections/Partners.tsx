@@ -7,7 +7,7 @@ const partners: { name: string; logo: string | null; tier: "hlavni" | "partner" 
   { name: "Petrás Režek", logo: "/logo_partneri/petrasrezek-svetle-pozadi.png", tier: "partner" },
   { name: "Aricoma", logo: "/logo_partneri/Aricoma_id27lxQ4YM_2.svg", tier: "partner" },
   { name: "eD system / Microsoft", logo: "/logo_partneri/eD_microsoft.jpg", tier: "hlavni" },
-  { name: "Zlínský kraj", logo: "/logo_partneri/zlinsky-kraj.svg", tier: "hlavni" },
+  { name: "Zlínský kraj", logo: "/logo_partneri/zlinskykraj.jpg", tier: "hlavni" },
 ];
 
 export function Partners() {
