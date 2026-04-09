@@ -53,6 +53,7 @@ export function Speakers() {
                       durationInFrames={90}
                       width={400}
                       height={220}
+                      loop
                       style={{ width: "100%", height: "100%" }}
                     />
                   </div>
