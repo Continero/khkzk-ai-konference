@@ -105,14 +105,14 @@ export const program: ProgramBlock[] = [
     title: "Architektura adopce",
     description: "Jak nastavit prostředí a systém, aby AI ve firmě dávala smysl a lidi ji brali.",
     type: "talk",
-    speaker: "Dalibor Mráz",
+    speaker: "Dalibor Mráz, ČERNÁ.AI / Webvalley",
   },
   {
     time: "9:40 — 10:10",
     title: "AI Agenti v administrativě",
     description: "Konkrétní ukázky v Outlooku a jinde — co ten \"digitální zaměstnanec\" reálně odpracuje.",
     type: "talk",
-    speaker: "David Fogl",
+    speaker: "David Fogl, Continero",
   },
   {
     time: "10:10 — 10:40",
@@ -131,14 +131,14 @@ export const program: ProgramBlock[] = [
     title: "Microsoft Copilot — Váš standardní nástroj",
     description: "Co všechno AI v Office zvládne a jak vypadá moderní práce s dokumenty.",
     type: "talk",
-    speaker: "Radek Štěrba, Microsoft",
+    speaker: "Radek Štěrba, eD system / Microsoft",
   },
   {
     time: "11:10 — 11:40",
     title: "Realistický pohled na AI projekty",
     description: "Data, oprávnění, integrace a odpovědnost.",
     type: "talk",
-    speaker: "Elixeum",
+    speaker: "Martin Pernica, Elixeum",
   },
   {
     time: "11:40 — 12:50",
@@ -164,7 +164,7 @@ export const program: ProgramBlock[] = [
     title: "Strojové vidění",
     description: "Jak AI vidí do procesů fabriky a co z těch dat dokáže vytáhnout.",
     type: "talk",
-    speaker: "Continental Barum",
+    speaker: "Marek Olbert, Continental Barum",
   },
   {
     time: "13:50 — 14:15",
@@ -183,7 +183,7 @@ export const program: ProgramBlock[] = [
     title: "Humanoidní robot",
     description: "Vizuální show a ukázka toho, že AI už není jen text v počítači.",
     type: "talk",
-    speaker: "Blogic",
+    speaker: "Zdeněk Huspenina, Blogic",
   },
   {
     time: "14:45+",
