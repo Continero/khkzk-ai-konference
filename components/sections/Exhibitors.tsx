@@ -7,7 +7,7 @@ const exhibitors: { name: string; logo: string | null }[] = [
   { name: "Elixeum", logo: null },
   { name: "Microsoft", logo: null },
   { name: "EPRIN", logo: "/logo_vystavovatele/eprin.jpg" },
-  { name: "FAME UTB", logo: "/logo_vystavovatele/fame-bez400.png" },
+  { name: "FAME UTB", logo: "/logo_vystavovatele/fame-full400.jpg" },
   { name: "Scheduling", logo: null },
 ];
 
