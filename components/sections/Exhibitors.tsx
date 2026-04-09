@@ -7,7 +7,7 @@ const exhibitors: { name: string; logo: string | null; lightBg?: boolean }[] = [
   { name: "Elixeum", logo: "/logo_vystavovatele/elixeum-logo.svg" },
   { name: "eD system / Microsoft", logo: "/logo_partneri/eD_microsoft.jpg", lightBg: true },
   { name: "EPRIN", logo: "/logo_vystavovatele/eprin.jpg", lightBg: true },
-  { name: "FAME UTB", logo: "/logo_vystavovatele/fame-full400.jpg", lightBg: true },
+  { name: "FAI UTB", logo: "/logo_vystavovatele/FAI_UTB.png", lightBg: true },
   { name: "Scheduling", logo: "/logo_vystavovatele/schedule_logo.png" },
 ];
 
