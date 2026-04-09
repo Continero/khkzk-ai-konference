@@ -2,13 +2,13 @@
 
 import { ScrollReveal } from "@/components/ScrollReveal";
 
-const exhibitors: { name: string; logo: string | null }[] = [
+const exhibitors: { name: string; logo: string | null; lightBg?: boolean }[] = [
   { name: "Mingleminds / Artima.ai", logo: "/logo_vystavovatele/artima-logo.svg" },
-  { name: "Elixeum", logo: null },
-  { name: "Microsoft", logo: null },
-  { name: "EPRIN", logo: "/logo_vystavovatele/eprin.jpg" },
-  { name: "FAME UTB", logo: "/logo_vystavovatele/fame-full400.jpg" },
-  { name: "Scheduling", logo: null },
+  { name: "Elixeum", logo: "/logo_vystavovatele/elixeum-logo.svg" },
+  { name: "eD system / Microsoft", logo: "/logo_partneri/eD_microsoft.jpg", lightBg: true },
+  { name: "EPRIN", logo: "/logo_vystavovatele/eprin.jpg", lightBg: true },
+  { name: "FAME UTB", logo: "/logo_vystavovatele/fame-full400.jpg", lightBg: true },
+  { name: "Scheduling", logo: "/logo_vystavovatele/schedule_logo.png" },
 ];
 
 export function Exhibitors() {
@@ -27,7 +27,10 @@ export function Exhibitors() {
         <div className="flex flex-wrap items-center justify-center gap-5">
           {exhibitors.map((ex, i) => (
             <ScrollReveal key={ex.name} delay={0.05 + i * 0.08}>
-              <div className="hud-panel rounded-lg px-8 py-5 flex items-center justify-center transition-all hover:bg-[rgba(0,160,255,0.06)] min-w-[140px]">
+              <div
+                className={`rounded-lg px-8 py-5 flex items-center justify-center transition-all min-w-[140px] ${ex.lightBg ? "" : "hud-panel hover:bg-[rgba(0,160,255,0.06)]"}`}
+                style={ex.lightBg ? { background: "rgba(255,255,255,0.92)" } : undefined}
+              >
                 {ex.logo ? (
                   <img
                     src={ex.logo}
