@@ -32,15 +32,16 @@ exports.handler = async function (event) {
     });
   }
 
-  // Build participant HTML — each on one line with bold labels
-  const participantHtml = participants
+  // Build participant HTML rows — each participant as a table row with label/value td pairs
+  // Parser expects: <h3>Účastníci</h3><table><tr><td>Jméno:</td><td>value</td>...</tr></table>
+  const participantRows = participants
     .map(
       (p) =>
-        `<b>Jméno:</b> ${esc(p.jmeno)}&nbsp; <b>Pozice:</b> ${esc(p.pozice)}&nbsp; <b>E-mail:</b> <a href="mailto:${esc(p.email)}">${esc(p.email)}</a>&nbsp; <b>Telefonní číslo:</b> ${esc(p.telefon)}`
+        `  <tr><td><b>Jméno:</b></td><td>${esc(p.jmeno)}</td><td><b>Pozice:</b></td><td>${esc(p.pozice)}</td><td><b>E-mail:</b></td><td><a href="mailto:${esc(p.email)}">${esc(p.email)}</a></td><td><b>Telefonní číslo:</b></td><td>${esc(p.telefon)}</td></tr>`
     )
-    .join("<br>\n");
+    .join("\n");
 
-  // HTML email matching KHKZK format
+  // HTML email matching KHKZK format — uses table structure for parser compatibility
   const html = `<div style="font-family: sans-serif; font-size: 14px; color: #333;">
 <p><b>Zpráva z kontaktního formuláře www stránek</b>&nbsp; <a href="https://aivpraxi.khkzk.cz">aivpraxi.khkzk.cz</a></p>
 <table cellpadding="4" cellspacing="0" style="font-size: 14px;">
@@ -52,9 +53,10 @@ exports.handler = async function (event) {
 </table>
 
 <h3 style="margin: 20px 0 10px 0;">Účastníci</h3>
-<p>${participantHtml}</p>
-
-<p>Poznámka:<br>${esc(data.poznamka || "")}</p>
+<table cellpadding="4" cellspacing="0" style="font-size: 14px;">
+${participantRows}
+  <tr><td><b>Poznámka:</b></td><td colspan="7">${esc(data.poznamka || "")}</td></tr>
+</table>
 </div>`;
 
   // Plain text fallback
