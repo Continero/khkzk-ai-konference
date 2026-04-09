@@ -101,9 +101,9 @@ export const HeroComposition: React.FC = () => {
         {/* Subtitle */}
         <div style={{
           fontSize: 30,
-          color: "rgba(200,210,220,0.9)",
-          fontWeight: 300,
-          textShadow: "0 0 12px rgba(255,159,28,0.4), 0 0 30px rgba(255,159,28,0.15)",
+          color: "rgba(255,200,100,0.95)",
+          fontWeight: 400,
+          textShadow: "0 0 10px rgba(255,159,28,0.8), 0 0 30px rgba(255,159,28,0.5), 0 0 60px rgba(255,120,0,0.3)",
           opacity: subOp,
         }}>
           Od experimentů k reálným výsledkům
