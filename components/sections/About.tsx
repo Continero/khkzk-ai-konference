@@ -6,7 +6,7 @@ import { DataReadout } from "@/components/remotion/DataReadout";
 
 const stats = [
   { value: "118", label: "RESPONDENTŮ", gauge: 0.85 },
-  { value: "6+", label: "PŘEDNÁŠEK", gauge: 0.6 },
+  { value: "7+", label: "PŘEDNÁŠEK", gauge: 0.7 },
   { value: "1", label: "DEN PLNÝ AI", gauge: 1.0 },
   { value: "20.5.", label: "KVĚTEN 2026", gauge: 0.42 },
 ];
