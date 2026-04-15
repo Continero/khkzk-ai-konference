@@ -61,6 +61,15 @@ export const speakers: Speaker[] = [
     photo: "/recnici/martin_pernica.png",
   },
   {
+    name: "Václav Adamec",
+    company: "Gauss Algorithmic",
+    talk: "Case studies z nasazování AI ve firmách",
+    bio: "Vede obchod a marketing v Gauss Algorithmic, české AI consultancy s působením napříč regionem CEE. V AI od roku 2019, dříve ve scale-upu Mycroft Mind (evropský IPCEI projekt pro low-power edge AI). Spojuje technologie s reálným byznysem a mění ambiciózní nápady ve fungující řešení. Člen České asociace umělé inteligence.",
+    status: "confirmed",
+    initials: "VA",
+    photo: "/recnici/vaclav_adamec.png",
+  },
+  {
     name: "Marek Olbert",
     company: "Continental Barum",
     talk: "Strojové vidění",
@@ -154,10 +163,10 @@ export const program: ProgramBlock[] = [
   },
   {
     time: "12:50 — 13:20",
-    title: "Case Study (TBD)",
-    description: "Reálný příklad integrace AI do vnitřních systémů.",
+    title: "Case studies z nasazování AI",
+    description: "Automatické programování CNC strojů ze 3D modelů, vyčítání výkresové dokumentace, optimalizace cenových nabídek a doporučovač účasti v tendrech pro Zentivu.",
     type: "talk",
-    speaker: "TBD",
+    speaker: "Václav Adamec, Gauss Algorithmic",
   },
   {
     time: "13:20 — 13:50",
