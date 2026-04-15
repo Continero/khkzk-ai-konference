@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { galleryPhotos } from "@/lib/data";
@@ -18,8 +18,13 @@ function shuffle<T>(arr: T[]): T[] {
 const DISPLAY_COUNT = 12;
 
 export function Gallery() {
-  // Random selection on each mount
-  const photos = useMemo(() => shuffle(galleryPhotos).slice(0, DISPLAY_COUNT), []);
+  // Stable order for SSR + first client render to avoid hydration mismatch.
+  // Shuffle only after mount on the client.
+  const [photos, setPhotos] = useState(() => galleryPhotos.slice(0, DISPLAY_COUNT));
+
+  useEffect(() => {
+    setPhotos(shuffle(galleryPhotos).slice(0, DISPLAY_COUNT));
+  }, []);
 
   return (
     <section className="relative py-28 px-6 overflow-hidden">
