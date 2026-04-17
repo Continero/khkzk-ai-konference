@@ -189,8 +189,8 @@ export const program: ProgramBlock[] = [
   },
   {
     time: "14:15 — 14:45",
-    title: "Humanoidní robot",
-    description: "Vizuální show a ukázka toho, že AI už není jen text v počítači.",
+    title: "Vývoj humanoidního robota",
+    description: "Pohled do vývoje humanoidního robota — jak ho v Blogicu stavíme a kam se posouvá AI v robotice.",
     type: "talk",
     speaker: "Zdeněk Huspenina, Blogic",
   },
@@ -219,7 +219,7 @@ export const topics = [
     icon: "robot",
     title: "Průmysl a budoucnost",
     description:
-      "Strojové vidění ve výrobě, humanoidní robot naživo. Jak AI vidí do procesů fabriky a co z dat dokáže vytáhnout.",
+      "Strojové vidění ve výrobě a vývoj humanoidního robota. Jak AI vidí do procesů fabriky a co z dat dokáže vytáhnout.",
   },
 ] as const;
 

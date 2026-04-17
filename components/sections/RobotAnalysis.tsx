@@ -16,7 +16,7 @@ export function RobotAnalysis() {
             Robotika na konferenci
           </h2>
           <p className="text-text-secondary text-center mb-8 text-sm">
-            Humanoidní roboti, kolaborativní ramena a automatizace. Naživo.
+            Kolaborativní rameno a interaktivní robot UTB. Naživo.
           </p>
         </ScrollReveal>
 
@@ -40,9 +40,9 @@ export function RobotAnalysis() {
         {/* Robot facts */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-8">
           {[
-            { label: "BOTT-E", desc: "Humanoidní robot UTB" },
-            { label: "FANUC", desc: "Kolaborativní ramena" },
-            { label: "GEORGE", desc: "AI humanoid asistent" },
+            { label: "BOTT-E", desc: "Interaktivní robot UTB" },
+            { label: "FANUC", desc: "Kolaborativní rameno" },
+            { label: "AI", desc: "Copilot a agenti naživo" },
             { label: "LIVE", desc: "Demo přímo na místě" },
           ].map((item, i) => (
             <ScrollReveal key={item.label} delay={0.1 + i * 0.08}>

@@ -10,7 +10,7 @@ const inter = Inter({
 const SITE_URL = "https://aivpraxi.khkzk.cz";
 const TITLE = "AI v praxi 2026 — Konference KHKZK";
 const DESCRIPTION =
-  "Celodenní konference o umělé inteligenci a robotice v praxi. Reálné case studies, live demo humanoidních robotů, Microsoft Copilot a networking. 20. května 2026, Interhotel Zlín. Pořádá Krajská hospodářská komora Zlínského kraje.";
+  "Celodenní konference o umělé inteligenci a robotice v praxi. Reálné case studies, live demo robotů, Microsoft Copilot a networking. 20. května 2026, Interhotel Zlín. Pořádá Krajská hospodářská komora Zlínského kraje.";
 
 export const metadata: Metadata = {
   title: {
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     "Zlínský kraj",
     "AI agenti",
     "strojové vidění",
-    "humanoidní robot",
+    "live demo robotů",
     "case study AI",
     "Gauss Algorithmic",
     "automatizace AI",

@@ -29,7 +29,7 @@ const icons: Record<string, React.ReactNode> = {
 
 const formats = [
   { label: "Case Studies", desc: "Reálné výsledky firem v číslech" },
-  { label: "Live Demo", desc: "Humanoidní robot a AI naživo" },
+  { label: "Live Demo", desc: "Roboti a AI naživo" },
   { label: "Networking", desc: "Celý den s AI praktiky, oběd v ceně" },
 ];
 
