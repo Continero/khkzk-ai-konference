@@ -225,27 +225,39 @@ export const topics = [
 
 export const testimonials: Testimonial[] = [
   {
-    quote: "Konečně konference, kde se nemluví o AI teoreticky, ale ukazují se reálné výsledky. Odcházela jsem s konkrétním plánem, co ve firmě změnit.",
-    name: "Jana Nováková",
-    company: "CFO, Plastika a.s.",
+    quote: "Konference AI v praxi pro mě byla velmi příjemná a inspirativní zkušenost. Nejvíc mě zaujalo téma praktického využití AI v marketingu a automatizaci rutinních činností, podané srozumitelně a s konkrétními příklady — pomáhá mi při každodenní práci. Oceňuji otevřenou atmosféru, možnost diskuse a přenositelnost poznatků do reálné praxe. Určitě bych ji doporučil podnikatelům a manažerům.",
+    name: "p. Matula",
+    company: "Generali",
     year: 2025,
   },
   {
-    quote: "Ta live ukázka robota byla něco neuvěřitelného. Hned jsme začali řešit automatizaci naší výrobní linky.",
-    name: "Petr Dvořák",
-    company: "Jednatel, DVR Manufacturing",
+    quote: "Na konferenci mě zaujala pestrá skladba přednášejících z různých firem a odvětví, díky níž bylo možné srovnat různé přístupy a pohledy na využití umělé inteligence v praxi. Příjemné prostředí místa konání spolu s výborným občerstvením přispěly k uvolněné atmosféře, která přála networkingu i neformálním diskusím. AI konferenci považuji za velmi zdařilou.",
+    name: "p. Gross",
+    company: "ANC Components",
     year: 2025,
   },
   {
-    quote: "Networking s lidmi, kteří AI reálně používají, měl pro nás větší hodnotu než rok hledání na internetu.",
-    name: "Martin Kopecký",
-    company: "CTO, DataPoint Solutions",
+    quote: "Reálné užívání AI v praxi u firem ze Zlínského kraje — velmi inspirativní a skvělý odrazový můstek k zavedení prvních kroků u nás ve firmě. Na panelové diskuzi bylo zajímavé vidět dva protipóly — start-upisty vs. korporáty. Dynamika, rychlost, přístup k bezpečnosti.",
+    name: "p. Janečka",
+    company: "Adria Gold",
     year: 2025,
   },
   {
-    quote: "Díky této konferenci jsme nasadili AI do zákaznického servisu a ušetříme 40 hodin měsíčně.",
-    name: "Eva Bartošová",
-    company: "HR Director, ZlinTech Group",
+    quote: "Konference pro mě byla velmi přínosná a odnesla jsem si z ní řadu konkrétních inspirací do praxe. Závěrečná prezentace Davida Fogla mě inspirovala natolik, že jsem následně zajistila AI školení pro celý náš tým. Celá konference se nesla ve velmi přátelské atmosféře s vynikajícím servisem — za což organizátorům patří velké poděkování. Už teď se těším na letošní ročník.",
+    name: "pí. Navrátilová",
+    company: "KAPKA resort",
+    year: 2025,
+  },
+  {
+    quote: "Konference AI pro mě byla velmi přínosná a inspirativní. Zaujala mě zejména ukázka virtuálního asistenta Zapier. Oceňuji také tipy na další možnosti využití AI aplikací.",
+    name: "pí. Zayats",
+    company: "CBS Nakladatelství",
+    year: 2025,
+  },
+  {
+    quote: "Nejvíc pro nás byly přínosné reálné ukázky a zkušenosti s tím, jak se AI skutečně používá v běžném firemním provozu.",
+    name: "p. Kokeš",
+    company: "SPECTRA",
     year: 2025,
   },
 ];

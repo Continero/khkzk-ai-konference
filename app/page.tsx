@@ -5,6 +5,7 @@ import { Hero } from "@/components/sections/Hero";
 import { Countdown } from "@/components/sections/Countdown";
 import { About } from "@/components/sections/About";
 import { Gallery } from "@/components/sections/Gallery";
+import { Testimonials } from "@/components/sections/Testimonials";
 import { RobotAnalysis } from "@/components/sections/RobotAnalysis";
 import { Topics } from "@/components/sections/Topics";
 import { Speakers } from "@/components/sections/Speakers";
@@ -28,13 +29,14 @@ export default function Home() {
           <About />
           <Topics />
           <Gallery />
+          <Testimonials />
           <Speakers />
           <RobotAnalysis />
+          <Exhibitors />
           <Program />
           <Venue />
           <Registration />
           <Partners />
-          <Exhibitors />
           <Footer />
         </div>
       </main>

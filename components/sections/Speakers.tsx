@@ -70,12 +70,6 @@ export function Speakers() {
             </ScrollReveal>
           ))}
         </div>
-
-        <ScrollReveal delay={0.4}>
-          <p className="text-center font-mono text-sm text-text-muted mt-10">
-            // Další řečníci budou postupně oznámeni
-          </p>
-        </ScrollReveal>
       </div>
     </section>
   );

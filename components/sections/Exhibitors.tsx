@@ -96,7 +96,7 @@ export function Exhibitors() {
             ▸ Demo_Zone
           </p>
           <h2 className="text-2xl sm:text-3xl font-bold mb-10 text-center text-text-secondary holo-glow">
-            Vystavovatelé
+            Co uvidíte v naší demo zóně: AI a robotizace v praxi
           </h2>
         </ScrollReveal>
 

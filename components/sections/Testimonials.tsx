@@ -37,7 +37,7 @@ export function Testimonials() {
 
                 <div className="flex items-center gap-3">
                   <div className="w-8 h-8 rounded bg-accent-cyan/10 flex items-center justify-center font-mono text-xs text-accent-cyan font-bold">
-                    {t.name.split(" ").map(w => w[0]).join("")}
+                    {t.name.split(" ").filter(w => !w.endsWith(".")).map(w => w[0]).join("") || t.name[0]}
                   </div>
                   <div>
                     <p className="text-sm font-semibold">{t.name}</p>
