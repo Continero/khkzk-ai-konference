@@ -333,15 +333,8 @@ export const conferenceInfo = {
   capacity: "150 - 200 účastníků",
   organizer: "Krajská hospodářská komora Zlínského kraje",
   pricing: {
-    earlyBird: {
-      label: "Early Bird",
-      period: "9. 4. - 23. 4. 2026",
-      member: { label: "Člen KHKZK", price: "2 390 Kč" },
-      nonMember: { label: "Nečlen", price: "3 390 Kč" },
-    },
     standard: {
-      label: "Standardní",
-      period: "od 24. 4. 2026",
+      label: "Jednotná cena",
       member: { label: "Člen KHKZK", price: "2 890 Kč" },
       nonMember: { label: "Nečlen", price: "3 890 Kč" },
     },

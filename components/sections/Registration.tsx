@@ -12,7 +12,7 @@ const perks = [
   "Konferenční materiály",
 ];
 
-const { earlyBird, standard } = conferenceInfo.pricing;
+const { standard } = conferenceInfo.pricing;
 
 export function Registration() {
   const { open } = useRegistrationModal();
@@ -32,9 +32,8 @@ export function Registration() {
           </p>
         </ScrollReveal>
 
-        {/* Pricing table */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-4xl mx-auto mb-10">
-          {/* Early Bird */}
+        {/* Pricing */}
+        <div className="max-w-xl mx-auto mb-10">
           <ScrollReveal delay={0.1}>
             <motion.div
               whileHover={{ y: -4 }}
@@ -42,45 +41,13 @@ export function Registration() {
             >
               <div className="h-[2px] bg-gradient-to-r from-transparent via-accent-gold to-transparent" />
               <div className="p-7 flex flex-col flex-1">
-                <span className="inline-block self-start mb-3 font-mono text-[11px] px-2 py-0.5 rounded bg-accent-gold/10 text-accent-gold border border-accent-gold/20 tracking-widest uppercase">
-                  Early Bird
+                <span className="inline-block self-start mb-5 font-mono text-[11px] px-2 py-0.5 rounded bg-accent-gold/10 text-accent-gold border border-accent-gold/20 tracking-widest uppercase">
+                  {standard.label}
                 </span>
-                <p className="font-mono text-xs text-text-muted mb-5">{earlyBird.period}</p>
-                <div className="space-y-4 mb-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
                   <div>
                     <p className="font-mono text-xs text-text-muted uppercase tracking-wider mb-1">Člen KHKZK</p>
-                    <span className="text-4xl font-extrabold text-accent-gold">{earlyBird.member.price}</span>
-                    <span className="font-mono text-xs text-text-muted ml-2">bez DPH</span>
-                  </div>
-                  <div>
-                    <p className="font-mono text-xs text-text-muted uppercase tracking-wider mb-1">Nečlen</p>
-                    <span className="text-4xl font-extrabold">{earlyBird.nonMember.price}</span>
-                    <span className="font-mono text-xs text-text-muted ml-2">bez DPH</span>
-                  </div>
-                </div>
-                <button
-                  onClick={open}
-                  className="block w-full py-3 rounded text-center font-mono text-base font-bold tracking-wider uppercase transition-all bg-accent-cyan text-bg-deep shadow-[0_0_20px_rgba(0,212,255,0.2)] hover:shadow-[0_0_30px_rgba(0,212,255,0.35)] mt-auto cursor-pointer"
-                >
-                  Registrovat_
-                </button>
-              </div>
-            </motion.div>
-          </ScrollReveal>
-
-          {/* Standard */}
-          <ScrollReveal delay={0.22}>
-            <motion.div
-              whileHover={{ y: -4 }}
-              className="hud-panel rounded-lg overflow-hidden h-full flex flex-col"
-            >
-              <div className="p-7 flex flex-col flex-1">
-                <h3 className="font-mono text-base font-bold mb-1 tracking-wide uppercase">Standardní</h3>
-                <p className="font-mono text-xs text-text-muted mb-5">{standard.period}</p>
-                <div className="space-y-4 mb-6">
-                  <div>
-                    <p className="font-mono text-xs text-text-muted uppercase tracking-wider mb-1">Člen KHKZK</p>
-                    <span className="text-4xl font-extrabold">{standard.member.price}</span>
+                    <span className="text-4xl font-extrabold text-accent-gold">{standard.member.price}</span>
                     <span className="font-mono text-xs text-text-muted ml-2">bez DPH</span>
                   </div>
                   <div>
@@ -91,7 +58,7 @@ export function Registration() {
                 </div>
                 <button
                   onClick={open}
-                  className="block w-full py-3 rounded text-center font-mono text-base font-bold tracking-wider uppercase transition-all border border-accent-cyan/20 text-accent-cyan hover:bg-accent-cyan/10 mt-auto cursor-pointer"
+                  className="block w-full py-3 rounded text-center font-mono text-base font-bold tracking-wider uppercase transition-all bg-accent-cyan text-bg-deep shadow-[0_0_20px_rgba(0,212,255,0.2)] hover:shadow-[0_0_30px_rgba(0,212,255,0.35)] mt-auto cursor-pointer"
                 >
                   Registrovat_
                 </button>
